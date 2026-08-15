@@ -4,5 +4,6 @@
   "creators": [{"name": "Boj Viudes, Mariano", "orcid": "0009-0003-5544-0273", "affiliation": "Independent Researcher"}],
   "version": "0.1.0",
   "upload_type": "software",
+  "doi": "10.5281/zenodo.21959348",
   "keywords": ["relational time", "nonhomogeneous time", "finite event networks", "CAL", "integrability", "holonomy", "cycle memory", "discrete Hodge decomposition", "provenance", "structural physics", "reproducibility"]
 }
