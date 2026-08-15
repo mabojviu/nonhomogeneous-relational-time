@@ -1,7 +1,8 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the archived release and associated Article 3 manuscript when available."
+message: "If you use this repository, please cite this archived pre-synthesis release and the associated Article 3 manuscript when available."
 title: "Nonhomogeneous relational time: structural and kinematic physics from finite relational event networks"
 version: 0.1.0
+doi: "10.5281/zenodo.21959348"
 type: software
 license: BSD-3-Clause
 repository-code: "https://github.com/mabojviu/nonhomogeneous-relational-time"
