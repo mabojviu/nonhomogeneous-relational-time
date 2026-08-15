@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the archived release and associated Article 3 manuscript when available."
+title: "Nonhomogeneous relational time: structural and kinematic physics from finite relational event networks"
+version: 0.1.0
+type: software
+license: BSD-3-Clause
+repository-code: "https://github.com/mabojviu/nonhomogeneous-relational-time"
+authors:
+  - family-names: "Boj Viudes"
+    given-names: "Mariano"
+    orcid: "https://orcid.org/0009-0003-5544-0273"
+keywords:
+  - relational time
+  - nonhomogeneous time
+  - finite event networks
+  - CAL
+  - integrability
+  - holonomy
+  - cycle memory
+  - discrete Hodge decomposition
+  - provenance
+  - reproducibility

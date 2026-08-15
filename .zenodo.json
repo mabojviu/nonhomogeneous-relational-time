@@ -1,0 +1,8 @@
+{
+  "title": "Nonhomogeneous relational time: structural and kinematic physics from finite relational event networks",
+  "description": "Pre-synthesis reproducibility archive for the LQTA-D Article 3 branch. The archive develops nonhomogeneous relational time from CAL scale comparisons, recovers local rates only in the integrable sector, identifies irreducible cycle-supported temporal memory, derives provenance-conditioned continuity and support-change defect laws, and closes with a no-go against a unique autonomous CAL generator. Claims are finite and structural/kinematic; no spacetime metric, Lorentz symmetry, energy, entropy, Hamiltonian, or autonomous dynamics is claimed.",
+  "creators": [{"name": "Boj Viudes, Mariano", "orcid": "0009-0003-5544-0273", "affiliation": "Independent Researcher"}],
+  "version": "0.1.0",
+  "upload_type": "software",
+  "keywords": ["relational time", "nonhomogeneous time", "finite event networks", "CAL", "integrability", "holonomy", "cycle memory", "discrete Hodge decomposition", "provenance", "structural physics", "reproducibility"]
+}

@@ -1,0 +1,31 @@
+{
+  "freeze": "LQTA-D-ARTICLE3-PRESYNTHESIS-v0.1",
+  "date": "2026-08-15",
+  "scientific_status": "READY_FOR_SYNTHESIS_AS_STRUCTURAL_KINEMATIC_THEORY__NOT_AUTONOMOUS_DYNAMICS",
+  "terminal_audit": "STOP_LQTA_PHYS_0K_NO_NATIVE_UNIQUE_CAL_GENERATOR__STRUCTURAL_NONHOMOGENEOUS_TIME_THEORY_READY_FOR_ARTICLE_3_SYNTHESIS",
+  "master_freeze": {
+    "filename": "LQTA_D_ARTICLE3_PRESYNTHESIS_FREEZE_v0_1_2026-08-15.zip",
+    "sha256": "2977969cdc830c15562486bd95e0fabfe3502879a914d1b214952b29ae113a61"
+  },
+  "repository_import_package": {
+    "filename": "nonhomogeneous-relational-time_v0_1_0_repo.zip",
+    "sha256": "1a2123aaf0a25aa3e15449bb44a22be5e0b8fe4fed522977543c3be4ef0e4c17"
+  },
+  "source_packages": [
+    {"block":"HOM-CAL-REFRACTOR-0","sha256":"d79472551e8d46197aa0af1bdcc8f0d6cdb0df52d845620a6789264da7c683da"},
+    {"block":"CLOCK-ORIGIN-1","sha256":"7130b392a3c679e3457dc5685a5a6903dde294a115adf32eaa5165625dea15ef"},
+    {"block":"PHYS-0E","sha256":"a7519a4a0daaa4ccb26e976d8935933c96062db104df153718377965763e7082"},
+    {"block":"PHYS-0F","sha256":"7376eaf8f003658218db2652243c7bed58fa00b9d64ea41ad1142948e4707b67"},
+    {"block":"PHYS-0G","sha256":"5331e8dc7b4573b717ef792c65115a9a3eeecd71bea2774a94545bae00743623"},
+    {"block":"PHYS-0H","sha256":"08e781d13fb8400c410c4a27074bf7f22e6b87e5930588cf5b42d365adfcc28b"},
+    {"block":"PHYS-0I","sha256":"0a886c213a682aaadf9f315f66940c7b7acc8c09d6d106cfa97a70cb9048ba3a"},
+    {"block":"PHYS-0J","sha256":"1234870b3b5593e7d5402293fcccb95bdd2221c55a56d422faae19f5467e4e7d"},
+    {"block":"PHYS-0K","sha256":"b05dba20d98ecb14b4933e30c84e120c1c37a0709edd7df3c5ec39da1e5697e9"}
+  ],
+  "notes": [
+    "This is not the Article 3 manuscript.",
+    "Standard mathematical components are not claimed as novel.",
+    "No autonomous CAL dynamics is claimed.",
+    "Cross-carrier Delta Rho is not a general physical source."
+  ]
+}
