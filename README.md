@@ -6,6 +6,8 @@
 
 Version `0.1.0`
 
+Zenodo DOI: `10.5281/zenodo.21959348`
+
 > Local clocks describe relational time only when scale comparison is globally integrable; once redundant relations carry nontrivial holonomy, temporal structure becomes collective and cannot be reduced to properties of individual clocks.
 
 ---
@@ -111,7 +113,7 @@ The scientific decision is:
 
 ## Reproducibility
 
-The complete frozen scientific packages are bound by SHA-256 in the release manifest. Human-readable scientific lineage and the manuscript blueprint are included in the repository; the exact binary freeze is intended for the GitHub release and Zenodo record.
+The complete frozen scientific packages are bound by SHA-256 in the release manifest. Human-readable scientific lineage and the manuscript blueprint are included in the repository; the exact binary freeze is archived under Zenodo DOI `10.5281/zenodo.21959348`.
 
 See:
 
