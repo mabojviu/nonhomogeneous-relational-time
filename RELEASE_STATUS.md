@@ -14,6 +14,10 @@ Zenodo DOI reserved for this release:
 
 `10.5281/zenodo.21959348`
 
+DOI-bound archive SHA-256:
+
+`238407016e89ef985c7bd0cb7586cc69d6757d2eeba27b3fa05c3337f41e7ac3`
+
 This DOI is bound to the pre-synthesis scientific freeze. The scientific content is unchanged by DOI binding; only publication metadata are updated.
 
-The exact DOI-bound archive must be uploaded to the existing Zenodo draft before publication. The pre-synthesis freeze and tag `v0.1.0` must remain historically recoverable after later Article 3 manuscript releases.
+The exact DOI-bound archive has been uploaded to the existing Zenodo draft. The pre-synthesis freeze and tag `v0.1.0` must remain historically recoverable after later Article 3 manuscript releases.
