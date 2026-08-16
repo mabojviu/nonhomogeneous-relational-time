@@ -1,0 +1,29 @@
+16 August 2026
+
+Editors
+Journal of Mathematical Physics
+AIP Publishing
+
+Re: Submission of "Nonhomogeneous Relational Time in Finite Event Networks: Integrability, Holonomy, and Collective Temporal Memory"
+
+Dear Editors,
+
+I respectfully submit the enclosed manuscript for consideration as a Research Article in the Journal of Mathematical Physics.
+
+The manuscript develops a finite mathematical framework for nonhomogeneous relational time without assuming a primitive global temporal parameter or an underlying continuous-time discretization. Its central results include an exact criterion for when pairwise temporal scale comparisons admit a complete representation by positive local rates, a cycle/holonomy characterization of the obstruction to that representation, provenance-conditioned balance identities for realized changes, restricted laws for changes of relational support, and a no-go result showing that the derived structural constraints do not by themselves select a unique autonomous update law.
+
+The work is positioned explicitly relative to graph-Hodge theory, synchronization and cycle consistency, persistent-Laplacian methods, and relational-clock formalisms. These mathematical and conceptual antecedents are cited as genuine reference points; the manuscript does not base its case on a priority claim for those individual ingredients.
+
+The underlying analytic and computational reproducibility record was frozen before manuscript synthesis and is publicly archived in Zenodo at DOI 10.5281/zenodo.21959348. The manuscript contains a Data Availability Statement and a claim-lineage table linking the principal statements to the frozen audit blocks. The study involves no human participants or animals and declares no conflicts of interest.
+
+OpenAI ChatGPT (GPT-5.6 Sol; OpenAI) was used during mathematical formalization, adversarial test design, verification work, literature synthesis, reproducibility organization, and drafting. In accordance with AIP Publishing policy, this use is disclosed in detail in the Methods section. All retained scientific claims, proofs, calculations, references, and interpretations were checked by the human author, who assumes full responsibility for the submitted work.
+
+Thank you for considering the manuscript.
+
+Sincerely,
+
+Mariano Boj Viudes
+Independent Researcher
+Villanueva del Pardillo, Spain
+ORCID: 0009-0003-5544-0273
+mabojviu@gmail.com
