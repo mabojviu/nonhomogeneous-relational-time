@@ -1,0 +1,134 @@
+--- /mnt/data/article3_referee_audit/LQTA_D_ARTICLE3_REFEREE_AUDITED_v0_10_0.tex	2026-08-16 13:32:34.266062501 +0000
++++ /mnt/data/article3_submission_v1_0/LQTA_D_ARTICLE3_SUBMISSION_CANDIDATE_v1_0.tex	2026-08-16 13:45:41.081692907 +0000
+@@ -4,6 +4,7 @@
+ \usepackage[utf8]{inputenc}
+ \usepackage{graphicx}
+ \usepackage{booktabs}
++\usepackage{float}
+ \usepackage{microtype}
+ \usepackage{url}
+ \usepackage[hidelinks]{hyperref}
+@@ -41,6 +42,8 @@
+ \keywords{relational time; discrete time; nonhomogeneous time; integrability; holonomy; temporal memory; graph cochains; provenance}
+ 
+ \maketitle
++\thispagestyle{plain}
++\pagestyle{plain}
+ 
+ \section{Introduction}\label{sec:introduction}
+ 
+@@ -1010,13 +1013,15 @@
+ \end{equation}
+ A future composition with an independently developed relational spatial branch may test whether additional jointly derived structures admit a spacetime interpretation. Such a composition must preserve the present firewalls unless a new theorem explicitly bridges them.
+ 
+-\section{Reproducibility and claim lineage}\label{sec:workflow}
++\section{Methods, reproducibility, and claim lineage}\label{sec:workflow}
+ 
+-The scientific results summarized in this article were frozen before manuscript synthesis. The corresponding pre-synthesis archive is publicly preserved at Zenodo DOI \href{https://doi.org/10.5281/zenodo.21959348}{10.5281/zenodo.21959348}, and the associated source repository is \url{https://github.com/mabojviu/nonhomogeneous-relational-time}. The archive preserves the analytic and computational audit blocks from which the manuscript claims are assembled, including negative results and explicit no-go boundaries.
++\subsection{Frozen scientific record and claim lineage}
++The scientific results summarized in this article were frozen before manuscript synthesis. The corresponding pre-synthesis archive is publicly preserved in Zenodo \cite{BojViudes2026Article3Archive}, and the associated source repository is \url{https://github.com/mabojviu/nonhomogeneous-relational-time}. The archive preserves the analytic and computational audit blocks from which the manuscript claims are assembled, including negative results and explicit no-go boundaries.
+ 
+ Appendix~\ref{app:lineage} provides a compact claim-lineage table linking the principal manuscript results to their frozen audit blocks. This traceability distinguishes manuscript exposition from post hoc alteration of the underlying scientific state.
+ 
+-OpenAI ChatGPT, using the GPT-5.6 Sol model, was used as a research tool during mathematical formalization, adversarial test design, code and verification work, literature synthesis, reproducibility organization, and manuscript drafting and revision. It was used to accelerate comparison of alternatives, identify consistency checks, and help express candidate statements precisely. Scientific claims and interpretations were retained only after explicit checking against the frozen analytic or computational record and, where applicable, the cited literature. The human author is solely responsible for the scientific content, verification decisions, interpretation, and submission.
++\subsection{AI-assisted research and verification methods}
++OpenAI ChatGPT (GPT-5.6 Sol; OpenAI) was used as a research-assistance tool during mathematical formalization, adversarial test design, code and verification work, literature synthesis, reproducibility organization, and manuscript drafting and revision. It was used to accelerate comparison of candidate formulations, identify consistency checks and counterexamples, synthesize literature for positioning, and assist in expressing candidate statements precisely. Because these uses included analysis and information synthesis that could affect scientific interpretation, every retained claim, proof, calculation, reference, and interpretation was checked by the human author against the frozen analytic or computational record or, where applicable, the primary literature. No AI system is an author. The human author is solely responsible for the scientific content, verification decisions, accuracy, interpretation, and submission.
+ 
+ \section{Conclusion}\label{sec:conclusion}
+ 
+@@ -1056,10 +1061,11 @@
+ Not applicable; this study involves no human participants, animals, or identifiable personal data.
+ 
+ \paragraph*{Author Contributions.}
+-Mariano Boj Viudes: Conceptualization, formal analysis, investigation, methodology, software, validation, visualization, writing -- original draft, and writing -- review and editing.
++Mariano Boj Viudes: Conceptualization, formal analysis, investigation, methodology, software, validation, writing -- original draft, and writing -- review and editing.
+ 
+ \section*{Data Availability Statement}
+-The reproducibility archive supporting the pre-synthesis scientific state of this study is publicly available on Zenodo at DOI: \href{https://doi.org/10.5281/zenodo.21959348}{10.5281/zenodo.21959348}. The associated source repository is \url{https://github.com/mabojviu/nonhomogeneous-relational-time}.
++The analytic and computational reproducibility materials that support the findings of this study are openly available in Zenodo under DOI 10.5281/zenodo.21959348 \cite{BojViudes2026Article3Archive}.
++
+ 
+ \appendix
+ 
+@@ -1107,33 +1113,38 @@
+ The square-plus-diagonal construction in Section~\ref{sec:defect} is the principal support-change witness: a newly introduced fundamental cycle may have zero period while the total non-exact norm changes because the carrier-dependent Hodge projector changes. This proves that a defect-local source formula anchored only to the newly born cycle cannot be extended from an integrable ancestor to an arbitrary nonintegrable parent. The radial maps in Section~\ref{sec:stop} are the minimal witnesses for update-law underdetermination when $\beta_1\ge1$; orthogonal transformations of the cycle subspace additionally exhibit the degeneracy of equal-$\Rcal$ level sets when $\beta_1\ge2$.
+ 
+ \section{Frozen result lineage}\label{app:lineage}
+-The labels below are internal audit identifiers preserved in the DOI-bound pre-synthesis archive. They are included to make the derivational lineage of the manuscript explicit; they are not additional assumptions.
++The labels below are internal audit identifiers preserved in the DOI-bound pre-synthesis archive. They are included to make the derivational lineage of the manuscript explicit; they are not additional assumptions. Table~\ref{tab:claim-lineage} maps each principal manuscript result to the frozen audit block from which it was synthesized.
+ 
+-\begin{widetext}
+-\begin{center}
+-\small
+-\begin{tabular}{p{0.27\textwidth}p{0.20\textwidth}p{0.45\textwidth}}
++\begin{table}[H]
++\caption{Claim lineage from principal manuscript results to frozen LQTA-D audit blocks.}
++\label{tab:claim-lineage}
++\centering
++\footnotesize
++\setlength{\tabcolsep}{4pt}
++\begin{tabular}{p{0.28\columnwidth}p{0.20\columnwidth}p{0.38\columnwidth}}
+ \toprule
+ Manuscript result & Frozen audit block(s) & Role in the present article \\
+ \midrule
+-Homogeneous calibration embedding & HOM-CAL-REFRACTOR-0 & Passive metrological reference $r_0$ \\
++Homogeneous calibration & HOM-CAL-REFRACTOR-0 & Passive metrological reference $r_0$ \\
+ Local-rate reconstruction & CLOCK-ORIGIN-1 & Exact CAL iff positive local-rate representation \\
+-Local/total non-exact magnitude & PHYS-0F & Definitions of $\rho_i$ and $\Rcal$ \\
+-Fixed-carrier change identity & PHYS-0G, PHYS-0H & Realized $\Delta\eta$ and $\Delta\Rcal$ classification \\
+-Provenance-conditioned continuity & PHYS-0E, PHYS-0F & History-conditioned current/source representation \\
+-Support persistence; bridge/cycle birth & PHYS-0I & Cross-support restrictions and $\kappa_e$ \\
+-Ancestor-anchored defect algebra & PHYS-0J & $K_F$ positivity and single-edge law \\
+-Autonomous update-law no-go & PHYS-0K & Structural/kinematic STOP boundary \\
++Non-exact magnitude & PHYS-0F & Definitions of $\rho_i$ and $\Rcal$ \\
++Fixed-carrier change & PHYS-0G, PHYS-0H & Realized $\Delta\eta$ and $\Delta\Rcal$ classification \\
++Provenance continuity & PHYS-0E, PHYS-0F & History-conditioned current/source representation \\
++Bridge/cycle support change & PHYS-0I & Cross-support restrictions and $\kappa_e$ \\
++Defect quadratic law & PHYS-0J & $K_F$ positivity and single-edge law \\
++Autonomous update no-go & PHYS-0K & Structural/kinematic STOP boundary \\
+ \bottomrule
+ \end{tabular}
+-\end{center}
+-\end{widetext}
++\end{table}
+ 
+ \begin{thebibliography}{30}
+ 
+ \bibitem{BojViudes2026TemporalDomains}
+ M. Boj Viudes, ``Collaborative relational time without a global clock: Reproducibility materials for finite event networks,'' Zenodo, Version 2.0.0, Software (2026), doi:10.5281/zenodo.21938420.
+ 
++\bibitem{BojViudes2026Article3Archive}
++M. Boj Viudes, ``Nonhomogeneous relational time: structural and kinematic physics from finite relational event networks,'' Zenodo, Version 0.1.0, Software (2026), \href{https://doi.org/10.5281/zenodo.21959348}{https://doi.org/10.5281/zenodo.21959348}.
++
+ \bibitem{PageWootters1983}
+ D. N. Page and W. K. Wootters, ``Evolution without evolution: Dynamics described by stationary observables,'' Phys. Rev. D \textbf{27}, 2885--2892 (1983), doi:10.1103/PhysRevD.27.2885.
+ 
+@@ -1159,7 +1170,7 @@
+ L. Chataignier, P. A. H\"ohn, M. P. E. Lock, and F. M. Mele, ``Relational dynamics with periodic clocks,'' New J. Phys. \textbf{28}, 034504 (2026), doi:10.1088/1367-2630/ae46d0.
+ 
+ \bibitem{TorresHugas2026}
+-L. Torres-Hugas, J. Duch, S. G\'omez, and A. Arenas, ``Cycle holonomy captures higher-order compatibility constraints in remote synchronization,'' arXiv:2604.19682 (2026).
++L. Torres-Hugas, J. Duch, S. G\'omez, and A. Arenas, ``Cycle holonomy induces higher-order constraints and controls remote synchronization transitions via twisted Laplacian spectra,'' arXiv:2604.19682 (2026).
+ 
+ \bibitem{Churilov2026}
+ M. V. Churilov, ``Finite Quantum Histories: Holonomy Spectra, Minimal Clocks, and Exact Clock-Change Covariance,'' arXiv:2608.05748 (2026).
+@@ -1171,16 +1182,16 @@
+ M. Desbrun, A. N. Hirani, M. Leok, and J. E. Marsden, ``Discrete exterior calculus,'' arXiv:math/0508341 (2005).
+ 
+ \bibitem{Jiang2011HodgeRank}
+-X. Jiang, L.-H. Lim, Y. Yao, and Y. Ye, ``Statistical ranking and combinatorial Hodge theory,'' Math. Program. \textbf{127}, 203--244 (2011).
++X. Jiang, L.-H. Lim, Y. Yao, and Y. Ye, ``Statistical ranking and combinatorial Hodge theory,'' Math. Program. \textbf{127}, 203--244 (2011), doi:10.1007/s10107-010-0419-x.
+ 
+ \bibitem{Lim2020HodgeLaplacians}
+-L.-H. Lim, ``Hodge Laplacians on graphs,'' SIAM Rev. \textbf{62}, 685--715 (2020).
++L.-H. Lim, ``Hodge Laplacians on graphs,'' SIAM Rev. \textbf{62}, 685--715 (2020), doi:10.1137/18M1223101.
+ 
+ \bibitem{Singer2011Synchronization}
+-A. Singer, ``Angular synchronization by eigenvectors and semidefinite programming,'' Appl. Comput. Harmon. Anal. \textbf{30}, 20--36 (2011).
++A. Singer, ``Angular synchronization by eigenvectors and semidefinite programming,'' Appl. Comput. Harmon. Anal. \textbf{30}, 20--36 (2011), doi:10.1016/j.acha.2010.02.001.
+ 
+ \bibitem{Bandeira2013ConnectionLaplacian}
+-A. S. Bandeira, A. Singer, and D. A. Spielman, ``A Cheeger inequality for the graph connection Laplacian,'' SIAM J. Matrix Anal. Appl. \textbf{34}, 1611--1630 (2013).
++A. S. Bandeira, A. Singer, and D. A. Spielman, ``A Cheeger inequality for the graph connection Laplacian,'' SIAM J. Matrix Anal. Appl. \textbf{34}, 1611--1630 (2013), doi:10.1137/120875338.
+ 
+ \end{thebibliography}
