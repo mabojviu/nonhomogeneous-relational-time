@@ -1,0 +1,250 @@
+% LQTA-D Article 3 -- Editorial Pass 02
+% Cycles, memory geometry, and fixed-carrier transitions candidate v0.3
+% This file is written as a replacement candidate for Sections sec:memory and sec:fixed.
+
+\section{Cycles, holonomy, and the geometry of collective temporal memory}
+\label{sec:memory}
+
+For any closed oriented cycle $C$, define the CAL period
+\begin{equation}
+\Pi_C(\gamma)=\sum_{e\in C}\epsilon_{C,e}\gamma_e,
+\label{eq:cycle-period}
+\end{equation}
+where $\epsilon_{C,e}=\pm1$ records agreement or disagreement with the chosen cycle orientation. Under a local recalibration
+\begin{equation}
+\gamma\longmapsto\gamma+D_0q,
+\end{equation}
+the period is invariant,
+\begin{equation}
+\Pi_C(\gamma+D_0q)=\Pi_C(\gamma),
+\end{equation}
+because the coboundary contribution telescopes around every closed cycle. Thus CAL cycle periods are properties of the relational comparison state modulo local recalibration.
+
+With the frozen unit edge inner product, write
+\begin{equation}
+\gamma=P_{\mathrm{ex}}\gamma+P_\perp\gamma
+      =D_0\phi+\eta,
+\qquad
+\eta=P_\perp\gamma\in\ker D_0^{\mathsf T}.
+\label{eq:hodge-memory-decomposition}
+\end{equation}
+The vector $\eta$ is gauge invariant under addition of exact cochains and contains exactly the part of CAL that is not representable by a global family of local rates.
+
+\begin{proposition}[Dimension of the memory sector]
+\label{prop:memory-dimension}
+Let $G$ be a connected finite CAL carrier. Then
+\begin{equation}
+\dim\ker D_0^{\mathsf T}=\beta_1(G)=|E|-|V|+1.
+\label{eq:memory-dimension}
+\end{equation}
+Consequently, the non-exact CAL sector has one real degree of freedom per independent cycle.
+\end{proposition}
+
+\paragraph*{Proof.}
+For a connected graph, $\operatorname{rank}D_0=|V|-1$. Rank--nullity for $D_0^{\mathsf T}:\mathbb R^{|E|}\to\mathbb R^{|V|}$ gives
+\begin{equation}
+\dim\ker D_0^{\mathsf T}=|E|-(|V|-1)=|E|-|V|+1=\beta_1(G).
+\end{equation}
+\hfill$\square$
+
+\begin{corollary}[Tree rigidity]
+\label{cor:tree-rigidity}
+If $G$ is a connected tree, then $\beta_1(G)=0$ and therefore
+\begin{equation}
+\eta=0
+\end{equation}
+for every CAL state. Every CAL assignment on a tree is integrable.
+\end{corollary}
+
+This gives the first structural separation:
+\begin{equation}
+\boxed{
+\text{nonhomogeneity does not require cycles, whereas irreducible CAL memory does.}
+}
+\label{eq:nonhom-vs-memory}
+\end{equation}
+
+Define the local allocation and total magnitude of the non-exact component by
+\begin{equation}
+\rho_i=\frac12\sum_{e\ni i}\eta_e^2,
+\qquad
+\Rcal=\sum_i\rho_i=\sum_e\eta_e^2=\lVert\eta\rVert^2.
+\label{eq:rho-R}
+\end{equation}
+The quantity $\Rcal$ is invariant under local recalibration. It measures the magnitude of the non-exact CAL component relative to the frozen cochain inner product. It is not identified with energy, entropy, elapsed time, matter density, action, or spacetime curvature.
+
+It is useful to distinguish the scalar magnitude $\Rcal$ from the full memory configuration $\eta$. States with the same value of $\Rcal$ need not carry the same cycle content when the cycle space has dimension greater than one.
+
+\subsection{One independent cycle: scalar memory up to sign}
+
+Suppose $\beta_1(G)=1$. Choose a unit vector $h$ spanning $\ker D_0^{\mathsf T}$. Then every non-exact state has the form
+\begin{equation}
+\eta=\alpha h,
+\qquad
+\Rcal=\alpha^2.
+\label{eq:beta1-one-coordinate}
+\end{equation}
+Hence a nonzero value of $\Rcal$ fixes the non-exact state up to the two possibilities
+\begin{equation}
+\eta=+\sqrt{\Rcal}\,h
+\qquad\text{or}\qquad
+\eta=-\sqrt{\Rcal}\,h.
+\label{eq:beta1-one-two-points}
+\end{equation}
+The scalar $\Rcal$ therefore loses only a sign/orientation of cycle content in the one-cycle sector.
+
+\begin{proposition}[Rigidity of source-free endpoints for $\beta_1=1$]
+\label{prop:beta1-sourcefree-rigidity}
+Let $\eta$ and $\eta'$ be two non-exact states on a fixed connected carrier with $\beta_1=1$. If
+\begin{equation}
+\lVert\eta'\rVert=\lVert\eta\rVert,
+\end{equation}
+then
+\begin{equation}
+\eta'=\eta
+\qquad\text{or}\qquad
+\eta'=-\eta.
+\label{eq:beta1-rigidity}
+\end{equation}
+If $\eta=0$, the only equal-$\Rcal$ endpoint is $\eta'=0$.
+\end{proposition}
+
+\subsection{Two or more independent cycles: a continuous memory manifold}
+
+For $\beta_1(G)=b\ge2$, choose an orthonormal basis $\{h_1,\ldots,h_b\}$ of the cycle subspace. Writing
+\begin{equation}
+\eta=\sum_{a=1}^{b}x_a h_a,
+\end{equation}
+gives
+\begin{equation}
+\Rcal=\sum_{a=1}^{b}x_a^2.
+\end{equation}
+For every fixed $\Rcal=R>0$, the set of non-exact states is therefore the sphere
+\begin{equation}
+\mathcal M_R
+=
+\{\eta\in\ker D_0^{\mathsf T}:\lVert\eta\rVert^2=R\}
+\cong S^{b-1}.
+\label{eq:memory-sphere}
+\end{equation}
+Thus the total amount $\Rcal$ does not determine how memory is distributed among independent cycle directions.
+
+Equivalently, if $O$ is any orthogonal transformation of the cycle subspace,
+\begin{equation}
+\eta' = O\eta
+\qquad\Longrightarrow\qquad
+\Rcal'=\Rcal.
+\label{eq:orthogonal-memory}
+\end{equation}
+For $b\ge2$ there is a continuous family of such states.
+
+The distinction can be made concrete on a carrier containing two independent edge-disjoint cycles. Let $h_1$ and $h_2$ be their normalized cycle vectors. Then
+\begin{equation}
+\eta(\theta)=\sqrt{R}\bigl(\cos\theta\,h_1+\sin\theta\,h_2\bigr)
+\label{eq:two-cycle-rotation}
+\end{equation}
+has $\Rcal=R$ for all $\theta$, while its edgewise and hence local $\rho_i$ allocation varies with $\theta$. The total nonintegrable content can therefore be conserved while its relational distribution changes.
+
+This is a purely kinematic statement about the state space. No preferred value of $\theta$, no rotation law, and no autonomous motion on $\mathcal M_R$ is selected by the present ontology.
+
+\section{Fixed-carrier transition classes}
+\label{sec:fixed}
+
+Let a realized CAL update occur on a fixed carrier. Write
+\begin{equation}
+\gamma' = \gamma+\Delta\gamma,
+\qquad
+\eta' = \eta+\Delta\eta,
+\end{equation}
+where
+\begin{equation}
+\Delta\eta=P_\perp\Delta\gamma.
+\label{eq:delta-eta}
+\end{equation}
+Because the projector is fixed, the change in total non-exact content is exactly
+\begin{align}
+\Delta\Rcal
+&=\lVert\eta'\rVert^2-\lVert\eta\rVert^2 \\
+&=2\langle\eta,\Delta\eta\rangle+\lVert\Delta\eta\rVert^2.
+\label{eq:fixed-transition-law}
+\end{align}
+
+\begin{definition}[Fixed-carrier transition classes]
+A realized update is called
+\begin{enumerate}
+\item \emph{exact-only} if $\Delta\eta=0$;
+\item \emph{transverse source-free} if $\Delta\eta\neq0$ but $\Delta\Rcal=0$;
+\item \emph{source-positive} if $\Delta\Rcal>0$;
+\item \emph{source-negative} if $\Delta\Rcal<0$.
+\end{enumerate}
+\end{definition}
+
+The terminology ``source'' refers only to the structural balance of $\Rcal$. It does not assign an energetic or thermodynamic meaning to the sign.
+
+\begin{proposition}[Integrable-origin positivity]
+\label{prop:integrable-origin-positive}
+If the initial state is integrable, $\eta=0$, then
+\begin{equation}
+\Delta\Rcal=\lVert\Delta\eta\rVert^2\ge0.
+\label{eq:integrable-origin-law}
+\end{equation}
+Therefore an integrable state can leave the integrable sector only through a source-positive realized update. A source-free update starting from $\eta=0$ remains integrable.
+\end{proposition}
+
+\begin{proposition}[Erasure of nonintegrability]
+\label{prop:erasure}
+If a realized update sends $\eta$ to $\eta'=0$, then
+\begin{equation}
+\Delta\Rcal=-\lVert\eta\rVert^2=-\Rcal.
+\label{eq:erasure-law}
+\end{equation}
+Thus complete erasure of pre-existing nonintegrability is necessarily source-negative on fixed support.
+\end{proposition}
+
+\subsection{Source-free transitions as motion on an equal-$\Rcal$ sphere}
+
+A transverse update is source-free exactly when
+\begin{equation}
+\lVert\eta'\rVert=\lVert\eta\rVert.
+\label{eq:sourcefree-sphere}
+\end{equation}
+The geometry therefore depends sharply on the cycle rank.
+
+For $\beta_1=1$, Proposition~\ref{prop:beta1-sourcefree-rigidity} implies that the only endpoints at fixed nonzero $\Rcal$ are
+\begin{equation}
+\eta'=\eta
+\qquad\text{and}\qquad
+\eta'=-\eta.
+\end{equation}
+The second is a nontrivial source-free inversion.
+
+For $\beta_1\ge2$, every orthogonal transformation of the cycle subspace supplies a source-free endpoint,
+\begin{equation}
+\eta'=O\eta,
+\qquad O\in O(\beta_1),
+\label{eq:sourcefree-orthogonal}
+\end{equation}
+and the equal-$\Rcal$ state space contains a continuum. Consequently, conservation of $\Rcal$ is much weaker than conservation of the detailed temporal-memory configuration.
+
+\subsection{Radial transition family}
+
+A particularly transparent family is
+\begin{equation}
+\eta'=\lambda\eta,
+\qquad\lambda\in\mathbb R.
+\label{eq:radial-map}
+\end{equation}
+For $\eta\neq0$,
+\begin{equation}
+\Delta\Rcal=(\lambda^2-1)\Rcal.
+\label{eq:radial-source}
+\end{equation}
+Hence
+\begin{align}
+|\lambda|&<1 &&\Longrightarrow &&\Delta\Rcal<0,\\
+|\lambda|&=1 &&\Longrightarrow &&\Delta\Rcal=0,\\
+|\lambda|&>1 &&\Longrightarrow &&\Delta\Rcal>0.
+\end{align}
+The cases $\lambda=1$ and $\lambda=-1$ already give two inequivalent source-free maps whenever $\eta\neq0$.
+
+These results are classifications of possible realized changes, not laws selecting one change. In particular, neither the sign of $\Delta\Rcal$ nor conservation of $\Rcal$ provides an endogenous transition principle. The fixed-carrier geometry therefore anticipates the generator no-go of Section~\ref{sec:stop}: structural invariants constrain evolution but do not determine it.
