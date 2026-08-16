@@ -1,0 +1,1 @@
+Table 1: The table maps each principal manuscript result to the frozen LQTA-D audit block from which it was synthesized, covering homogeneous calibration, local-rate reconstruction, non-exact magnitude, provenance continuity, support change, defect laws, and the autonomous-update no-go.
