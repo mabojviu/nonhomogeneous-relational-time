@@ -1,0 +1,55 @@
+% LQTA-D Article 3 -- Editorial Pass 01
+% Abstract + Introduction candidate v0.2
+% Purpose: adversarial tightening before integration into main.tex.
+
+\begin{abstract}
+We develop the nonhomogeneous sector of a finite relational theory of fundamentally discrete time. Temporal scale comparison is encoded by a calibration (CAL) 1-cochain $\gamma$ on a finite relational carrier, without assuming an underlying continuous temporal parameter. On a connected carrier, the CAL state admits a complete representation by positive local rates $r_i$ exactly when $\gamma$ is integrable, in which case $\gamma_{ij}=\log(r_j/r_i)$ and the rates are derived quantities unique up to one common positive calibration. In the general case, $\gamma=D_0\phi+\eta$, where the non-exact component $\eta$ is detected by cycle periods and cannot be absorbed into any global assignment of local rates. We interpret this gauge-invariant cycle-supported remainder as collective temporal memory in the restricted structural sense that relational information survives quotienting by local recalibrations. We derive exact structural measures of this nonintegrable content, a provenance-conditioned balance identity for realized changes, and a fixed-carrier transition classification. For changing relational support, bridge births alter relative calibration without creating holonomy, whereas cycle births carry a gauge-invariant defect and, relative to an integrable ancestor, generate nonintegrable content through a positive quadratic law. Finally, we show that the frozen relational ontology does not select a unique autonomous CAL generator. The theory therefore closes as a structural and kinematic theory of nonhomogeneous relational time rather than as an autonomous dynamics or a discretization of continuous time.
+\end{abstract}
+
+\section{Introduction}\label{sec:introduction}
+
+Local clocks are often introduced as fields whose rates are defined relative to an already available temporal parameter. That construction is appropriate when such a parameter is part of the physical input. It is less satisfactory when the aim is to derive temporal structure from finite relations, because it presupposes precisely the scalar description whose existence should first be tested. The more primitive question is therefore not how a collection of local rates varies over a background time, but under what conditions pairwise temporal scale comparisons admit any globally consistent assignment of local rates at all.
+
+The present work addresses that question within LQTA-D, a finite relational framework in which temporal structure is fundamentally discrete. The basic ontology consists of finite events, typed relational data, provenance/history structure, calibration comparisons, relational cycles, and changes of relational support. No continuous temporal manifold is assumed underneath these objects. Increasing carrier size or relational resolution may be used to test finite-size stability or scaling, but it is not interpreted as a discretization sequence whose target is a hidden continuous time. Discreteness is part of the model rather than a numerical approximation.
+
+A preceding LQTA-D construction established the finite event framework, typed ORD/CAL/CORR relations, relational calibration structure, and a temporal description not based on a primitive global scalar clock \cite{BojViudes2026TemporalDomains}. The present article isolates the nonhomogeneous calibration sector and develops consequences that are not obtained merely by assigning different rates to pre-existing clocks. Its organizing question is instead whether the relational CAL comparison data themselves admit a local-rate representation, what remains when they do not, and how that remainder behaves under realized updates and changes of relational support.
+
+Let $\gamma\in C^1(G;\mathbb R)$ denote the additive CAL scale-comparison cochain on a connected finite carrier $G$. The first exact result is a representation theorem:
+\begin{equation}
+\gamma_{ij}=\log\frac{r_j}{r_i}
+\label{eq:intro-rate-representation}
+\end{equation}
+for a global family of positive local rates $\{r_i\}$ if and only if $\gamma$ is exact. When this condition holds, the rates are reconstructed from CAL and are unique up to one common positive multiplicative factor. Thus the $r_i$ are not additional primitive fields in this sector; they are representatives of an integrable relational state.
+
+The general CAL state contains more information. With the frozen cochain inner product,
+\begin{equation}
+\gamma=D_0\phi+\eta,
+\label{eq:intro-decomposition}
+\end{equation}
+where the exact part $D_0\phi$ is representable by derived local rates and the non-exact part $\eta$ is not. Equivalently, $\eta\neq0$ is detected by nonvanishing CAL periods on relational cycles. The mathematical decomposition is standard finite cochain/Hodge theory; the model-specific statement is the temporal reading imposed by the LQTA-D ontology: the exact component is the part of nonhomogeneity attributable to a globally consistent family of local rates, whereas the non-exact component is irreducibly relational.
+
+We call this non-exact component \emph{collective temporal memory}. The terminology is deliberately narrow. It does not assert microscopic information storage, thermodynamic memory, entropy production, hysteresis, or a dynamical arrow of time. It means that after all locally integrable recalibrations have been factored out, a gauge-invariant cycle-supported remainder can persist in the relational temporal state. Its information is collective because no individual vertex variable, and no global family of local rates, can encode it alone. In this precise sense, the local-rate description is complete for the CAL sector exactly in the integrable case and incomplete in the presence of nontrivial holonomy.
+
+This distinction leads to a finite hierarchy of temporal description. A homogeneous state has $\gamma=0$ and one common metrological calibration. An integrable nonhomogeneous state has $\gamma=D_0\phi$ and admits derived rates $r_i=r_0e^{\phi_i}$. A general state has $\gamma=D_0\phi+\eta$ with $\eta\neq0$ and therefore contains temporal relational structure beyond any global assignment of local rates. In particular, trees may support nonhomogeneous but integrable comparison data, while irreducible CAL memory requires relational cycles.
+
+The second part of the article asks how this nonintegrable structure changes. On fixed support, the transverse component gives a gauge-invariant quantity $\mathcal R=\|\eta\|^2$ and an exact classification of realized transitions. When the realized event also supplies a provenance tree, provenance selects a canonical bookkeeping current $J$ satisfying an exact balance identity
+\begin{equation}
+\Delta\rho+\operatorname{div}_T J=S.
+\label{eq:intro-balance}
+\end{equation}
+This identity is intentionally not presented as an equation of motion. Provenance organizes the accounting of a change that has occurred; it does not choose which CAL change occurs.
+
+Changing relational support requires a separate treatment because the pre- and post-change cochain spaces are different. The theory therefore avoids a silent cross-carrier identification of $\eta$ or $\rho$. Instead, persistent cycle periods and defects anchored to an integrable ancestor provide the robust comparison data. A bridge birth joins previously disconnected calibration sectors without creating a new cycle and therefore cannot create CAL holonomy. A cycle birth can. For a new relation $e=(u,v)$ born from an integrable parent, the gauge-invariant defect
+\begin{equation}
+\kappa_e=\gamma'_e-\log\frac{r_v}{r_u}
+\label{eq:intro-kappa}
+\end{equation}
+vanishes exactly when integrability survives. For multiple births from one integrable ancestor, the resulting nonintegrable content obeys a positive quadratic form $\mathcal R_{\rm after}=\kappa^{\mathsf T}K\kappa$.
+
+A final no-go result establishes the boundary of the construction. Gauge covariance, preservation of the integrable sector, the balance identities, and the support-change defect algebra do not select a unique autonomous evolution for $\eta$. Inequivalent maps such as $\eta\mapsto\eta$, $\eta\mapsto-\eta$, and radial contractions or expansions remain compatible with the present structural constraints; for cycle rank at least two, even conservation of $\mathcal R$ leaves a continuous orthogonal family. A unique CAL generator would therefore require an additional physical selection principle. The theory developed here is consequently structural and kinematic, not an autonomous dynamics.
+
+The mathematical ingredients used in this analysis---finite cochains, exact/cycle decompositions, Hodge projections, cycle consistency, and graph-theoretic resistance identities---have well-established antecedents \cite{Whitney1957,Desbrun2005DEC,Jiang2011HodgeRank,Lim2020HodgeLaplacians}. Synchronization and connection-Laplacian problems provide particularly close formal neighbors because global consistency is controlled by cycle data \cite{Singer2011Synchronization,Bandeira2013ConnectionLaplacian}. We do not claim those ingredients as new. The object of the present work is their constrained assembly and temporal interpretation inside a discrete relational model with explicit provenance, support change, and endogeneity firewalls.
+
+Several identifications are excluded throughout. The CAL carrier is not physical space; $\eta$ is not spacetime curvature; $\rho$ is not matter density; $\mathcal R$ is not energy or entropy; $J$ is not a spatial current; the sign of a source is not a thermodynamic arrow; and graph-theoretic effective resistance is not assigned an electrical interpretation. Most importantly, the finite theory is not treated as an approximation to continuous time. Any future relation to space, metric structure, Lorentzian geometry, or a continuum description would have to be derived in a separate construction rather than read back into the present objects.
+
+The paper is organized as follows. Section~\ref{sec:setup} defines the finite CAL carrier, metrological convention, and the three temporal sectors. Section~\ref{sec:integrability} proves the reconstruction theorem for derived local rates. Section~\ref{sec:memory} develops the cycle-supported nonintegrable sector and its structural observables. Section~\ref{sec:balance} treats realized changes and provenance-conditioned balance, and Section~\ref{sec:fixed} classifies fixed-carrier transitions. Sections~\ref{sec:support} and \ref{sec:defect} analyze changes of relational support and the ancestor-anchored defect algebra. Section~\ref{sec:stop} proves the no-go for a unique endogenous autonomous generator. Section~\ref{sec:discussion} then synthesizes the result and states the boundary of the theory.
