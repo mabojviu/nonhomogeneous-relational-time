@@ -1,0 +1,228 @@
+% LQTA-D Article 3 -- Editorial Pass 05
+% Endogenous dynamics STOP theorem candidate v0.6
+% Purpose: prove underdetermination of autonomous CAL dynamics from the frozen ontology.
+
+\section{Boundary of endogenous dynamics: no unique autonomous CAL generator}
+\label{sec:stop}
+
+The preceding sections determine a state space, its gauge-invariant decomposition, exact integrability criteria, structural memory measures, provenance-conditioned accounting of realized changes, and restricted laws for changes of relational support. None of those results is yet an equation of motion. The final question of this article is whether the frozen ontology nevertheless selects one uniquely once all derived constraints are imposed.
+
+The answer is negative.
+
+\subsection{What would count as an endogenous generator?}
+
+Fix a connected CAL carrier $G$ and its frozen edge inner product. The state may be represented by
+\begin{equation}
+\gamma=D_0\phi+\eta,
+\qquad
+\eta\in\ker D_0^{\mathsf T}.
+\end{equation}
+Because local recalibration acts only on the exact component, an autonomous law for the irreducible CAL memory would have to induce a map
+\begin{equation}
+F_G:\ker D_0^{\mathsf T}\longrightarrow\ker D_0^{\mathsf T},
+\qquad
+\eta\longmapsto\eta'=F_G(\eta).
+\label{eq:memory-generator-map}
+\end{equation}
+A law selected by the present theory should at minimum respect the structural distinctions already derived. In particular, it should not manufacture a preferred calibration representative, and the integrable state should remain a well-defined distinguished sector:
+\begin{equation}
+F_G(0)=0.
+\label{eq:integrable-fixed-point}
+\end{equation}
+
+The results established earlier constrain the consequences of any realized map $F_G$ through
+\begin{equation}
+\Delta\Rcal
+=
+\|F_G(\eta)\|^2-\|\eta\|^2,
+\end{equation}
+with provenance providing a unique bookkeeping current only after this realized change is specified. They do not yet constrain $F_G$ strongly enough to make it unique.
+
+\subsection{Explicit inequivalent witnesses}
+
+Consider the one-parameter radial family
+\begin{equation}
+F_{\lambda}(\eta)=\lambda\eta,
+\qquad
+\lambda\in\mathbb R.
+\label{eq:radial-family}
+\end{equation}
+Every member preserves the cycle subspace and satisfies Eq.~\eqref{eq:integrable-fixed-point}. It also acts only on the gauge-invariant component $\eta$ and therefore introduces no preferred CAL gauge.
+
+For this family,
+\begin{equation}
+\Rcal' = \lambda^2\Rcal,
+\end{equation}
+and hence
+\begin{equation}
+\Delta\Rcal=(\lambda^2-1)\Rcal.
+\label{eq:radial-R-change}
+\end{equation}
+Thus the same frozen structural theory admits, among others,
+\begin{align}
+\lambda=1 &: \quad \eta' = \eta,
+&& \Delta\Rcal=0,
+\label{eq:witness-static}\\
+\lambda=-1 &: \quad \eta' = -\eta,
+&& \Delta\Rcal=0,
+\label{eq:witness-flip}\\
+\lambda=\tfrac12 &: \quad \eta' = \tfrac12\eta,
+&& \Delta\Rcal=-\tfrac34\Rcal,
+\label{eq:witness-contract}\\
+\lambda=\tfrac32 &: \quad \eta' = \tfrac32\eta,
+&& \Delta\Rcal=\tfrac54\Rcal.
+\label{eq:witness-expand}
+\end{align}
+These are mutually incompatible autonomous evolutions: one is static, one changes the memory configuration while preserving its norm, one decreases total non-exact content, and one increases it. Yet none violates the structural state-space decomposition or the integrable-sector condition.
+
+The existence of these four witnesses already proves nonuniqueness.
+
+\begin{theorem}[No unique endogenous autonomous CAL generator]
+\label{thm:generator-nogo}
+The frozen LQTA-D structures developed in this article---CAL gauge covariance, exact/non-exact decomposition, integrability, the structural norm $\Rcal$, provenance-conditioned continuity for realized changes, and the restricted support-change defect algebra---do not select a unique autonomous update map $F_G$ for the non-exact CAL state. At least the mutually inequivalent maps in Eqs.~\eqref{eq:witness-static}--\eqref{eq:witness-expand} remain structurally admissible. Therefore a unique autonomous CAL generator requires an additional physical selection principle not derived from the frozen ontology.
+\end{theorem}
+
+\paragraph*{Proof.}
+Each witness is a well-defined map from $\ker D_0^{\mathsf T}$ to itself and fixes $\eta=0$. Since $\eta$ is gauge invariant, none requires a choice of exact CAL representative. Once any witness is realized, the fixed-support transition identity and provenance-conditioned continuity law apply exactly to the resulting $\Delta\eta$ and $\Delta\rho$. The witnesses produce different trajectories and different values of $\Delta\Rcal$, so the existing structural constraints cannot distinguish a unique one. \hfill$\square$
+
+\subsection{Stronger underdetermination on multi-cycle carriers}
+
+The no-go is stronger when the cycle rank
+\begin{equation}
+\beta_1(G)=\dim\ker D_0^{\mathsf T}
+\end{equation}
+is at least two.
+
+Choose any orthonormal basis of the cycle subspace. For every orthogonal transformation
+\begin{equation}
+O\in O(\beta_1),
+\end{equation}
+define
+\begin{equation}
+F_O(\eta)=O\eta.
+\label{eq:orthogonal-family}
+\end{equation}
+Then
+\begin{equation}
+\Rcal' = \|O\eta\|^2=\|\eta\|^2=\Rcal.
+\label{eq:orthogonal-R}
+\end{equation}
+For $\beta_1\ge2$, the family contains a continuum of distinct configurations with the same total structural memory.
+
+\begin{corollary}[Conservation of $\Rcal$ does not select dynamics]
+\label{cor:R-not-generator}
+For $\beta_1\ge2$, the condition
+\begin{equation}
+\Delta\Rcal=0
+\end{equation}
+does not determine the post-update memory state. The equal-$\Rcal$ shell
+\begin{equation}
+\mathcal M_R
+=
+\{\eta\in\ker D_0^{\mathsf T}:\|\eta\|^2=R\}
+\cong S^{\beta_1-1}
+\end{equation}
+contains a continuum of structurally distinct states.
+\end{corollary}
+
+The orthogonal maps in Eq.~\eqref{eq:orthogonal-family} are existence witnesses only. Choosing a particular $O$ or a preferred basis of the cycle space would itself require additional structure. Their role is to prove underdetermination, not to propose a physical law.
+
+For $\beta_1=1$, the same conclusion appears in a discrete form. At fixed $\Rcal>0$, the memory state is restricted to the two antipodal configurations
+\begin{equation}
+\eta' = \pm\eta.
+\end{equation}
+Even there, conservation of $\Rcal$ does not distinguish stasis from sign reversal.
+
+\subsection{Why the previously derived structures do not close the dynamics}
+
+Each major result of the article constrains or interprets a realized transition without choosing it.
+
+\paragraph*{Gauge invariance.}
+Gauge invariance removes dependence on local calibration representatives. It constrains admissible observables and laws, but it does not specify which gauge-invariant map on the cycle subspace should occur.
+
+\paragraph*{The structural norm $\Rcal$.}
+The scalar $\Rcal=\|\eta\|^2$ quantifies total non-exact content, but many states share the same value. Treating $\Rcal$ as a potential and imposing monotonic decrease would be a new dynamical postulate, not a consequence of its definition.
+
+\paragraph*{Provenance-conditioned continuity.}
+The identity
+\begin{equation}
+\Delta\rho+\divT J_T=S_T
+\end{equation}
+becomes fully determined once the realized $\Delta\rho$ and provenance tree are supplied. It therefore closes the accounting of a transition, not the selection of the transition.
+
+\paragraph*{Restricted defect positivity.}
+For births from an integrable ancestor,
+\begin{equation}
+\Rcal^+=\kappa^{\mathsf T}K_F\kappa\ge0
+\end{equation}
+classifies the structural consequence of specified new-edge defects. It does not determine which new relations are born, their CAL values, or the defects $\kappa$.
+
+\paragraph*{Support-change persistence laws.}
+Persistent old periods cannot be erased by pure addition, and deletions obey exact restriction statements. These are admissibility constraints on support change, not a probability or generator for support change.
+
+The architecture therefore has a consistent logical direction:
+\begin{equation}
+\boxed{
+\text{state + realized event}
+\longrightarrow
+\text{exact structural consequences},
+}
+\label{eq:forward-logic}
+\end{equation}
+while the inverse problem
+\begin{equation}
+\boxed{
+\text{structural constraints}
+\not\Longrightarrow
+\text{unique realized event}
+}
+\label{eq:inverse-nogo}
+\end{equation}
+remains underdetermined.
+
+\subsection{Candidate selectors and the ontology boundary}
+
+Several additional principles could mathematically select a smaller class of maps, for example:
+\begin{itemize}
+\item monotonic decrease of $\Rcal$;
+\item maximal or minimal change of $\Rcal$;
+\item minimum-norm update;
+\item cancellation of newly generated cycle defects;
+\item a stochastic transition kernel;
+\item detailed balance;
+\item an action or variational principle;
+\item a Hamiltonian or gradient-flow structure;
+\item a rule favoring particular cycle directions or provenance histories.
+\end{itemize}
+None has been derived from the frozen LQTA-D ontology used in this article. Introducing any of them as a physical law would therefore constitute a new theory layer and should be identified explicitly as such.
+
+This boundary is particularly important for the interpretation of the continuity equation. The source $S_T$ cannot be used retrospectively to choose a transition by demanding, for example, $S_T=0$ or $S_T\le0$ unless such a principle is independently justified. Doing so would convert a diagnostic of realized structural change into an imported dynamical rule.
+
+\subsection{Scientific status of the nonhomogeneous theory}
+
+The no-go does not invalidate the preceding construction. It determines its correct scope. The theory derived here provides:
+\begin{enumerate}
+\item a finite gauge-covariant state space for temporal scale comparison;
+\item an exact criterion for when local rates provide a complete CAL representation;
+\item an irreducibly relational cycle-supported sector when they do not;
+\item gauge-invariant structural measures of that sector;
+\item an exact classification of fixed-support realized transitions;
+\item a provenance-selected continuity bookkeeping after a transition is realized;
+\item exact bridge/cycle-birth distinctions and restricted ancestor-anchored defect laws;
+\item explicit boundaries on cross-carrier source interpretation.
+\end{enumerate}
+What it does not provide is a unique endogenous autonomous law selecting the next CAL state.
+
+Accordingly, the correct closure statement is
+\begin{equation}
+\boxed{
+\text{LQTA-D nonhomogeneous sector}
+=
+\text{structural and kinematic theory}
+\neq
+\text{autonomous dynamics}.
+}
+\label{eq:structural-closure}
+\end{equation}
+
+Any later dynamical completion should preserve this no-go as a provenance statement: the additional selector must be displayed as newly derived physics or as an explicit extension, rather than attributed retroactively to the structural theory developed here.
