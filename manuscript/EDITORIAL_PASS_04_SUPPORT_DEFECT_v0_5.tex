@@ -1,0 +1,385 @@
+% LQTA-D Article 3 -- Editorial Pass 04
+% Changing support + defect algebra candidate v0.5
+% Notation decision introduced here:
+%   S_T is reserved for the provenance source.
+%   \iota_F denotes insertion of new-edge defect coordinates.
+
+\section{Changing relational support}
+\label{sec:support}
+
+The fixed-carrier formulas of the preceding sections cannot be transferred unchanged to a transition in which the active CAL support itself changes. If
+\begin{equation}
+G_-=(V_-,E_-)
+\qquad\longrightarrow\qquad
+G_+=(V_+,E_+),
+\end{equation}
+then
+\begin{equation}
+C^1(G_-;\mathbb R)
+\qquad\text{and}\qquad
+C^1(G_+;\mathbb R)
+\end{equation}
+are different cochain spaces, with different exact subspaces and, in general, different Hodge projectors. Consequently, expressions such as
+\begin{equation}
+\eta^+-\eta^-
+\end{equation}
+are not intrinsically defined unless the model supplies an identification between the two cochain spaces.
+
+This point is structural rather than technical. A silent zero-padding of an old cochain into a larger edge space would be an analyst-chosen embedding, not a physical relation selected by the frozen ontology. The cross-support statements below therefore use only data that are endogenously comparable: persistent relation identities, restrictions to persistent subcarriers, cycle periods on persistent cycles, Betti-number changes, and defects defined relative to an integrable ancestor.
+
+For the pure-birth results, assume
+\begin{equation}
+V_+=V_-=:V,
+\qquad
+E_-=E_{\rm old}\subset E_+=E_{\rm old}\sqcup F,
+\label{eq:pure-addition-support}
+\end{equation}
+where $F$ is the set of newly born CAL relations and the old relation values persist:
+\begin{equation}
+\gamma^+\big|_{E_{\rm old}}=\gamma^-.
+\label{eq:persistent-old-values}
+\end{equation}
+No value is assigned to a nonexistent pre-birth edge.
+
+\subsection{Persistent obstructions and deletion}
+
+\begin{proposition}[Persistence of an old obstruction under pure addition]
+\label{prop:persistent-obstruction}
+Suppose a cycle $C$ of $G_-$ persists as the same relation cycle in $G_+$ and Eq.~\eqref{eq:persistent-old-values} holds. Then
+\begin{equation}
+\Pi_C(\gamma^+)=\Pi_C(\gamma^-).
+\end{equation}
+Hence a nonzero CAL period supported on a persistent old cycle cannot be erased by pure relation addition.
+\end{proposition}
+
+\paragraph*{Proof.}
+The period uses only the CAL values of the edges belonging to $C$, all of which persist unchanged. \hfill$\square$
+
+\begin{proposition}[Restriction of an integrable state]
+\label{prop:deletion-integrability}
+If $\gamma^-=D_0^-\phi$ is integrable and $G_+$ is obtained solely by deleting CAL relations, with all surviving values inherited from $\gamma^-$, then every connected component of the restricted state is integrable.
+\end{proposition}
+
+\paragraph*{Proof.}
+Restrict the same vertex potential $\phi$ to the surviving edges. Each surviving CAL value remains a coboundary difference. \hfill$\square$
+
+Deletion may nevertheless remove a previously nonzero obstruction if the deleted relations destroy every cycle carrying that obstruction. Thus pure addition cannot cancel a persistent old period, whereas deletion can erase nonintegrability by removing its supporting cycle structure.
+
+\subsection{Bridge birth}
+
+Consider first two disconnected integrable components $A$ and $B$ of $G_-$. On each component,
+\begin{equation}
+\gamma^-\big|_A=D_0\phi_A,
+\qquad
+\gamma^-\big|_B=D_0\phi_B.
+\end{equation}
+Because the components are disconnected, the additive constants of $\phi_A$ and $\phi_B$ are independent. Equivalently, their derived local rates are fixed only up to independent common rescalings.
+
+Add one new relation $e:u\to v$ with $u\in A$ and $v\in B$. This edge is a bridge and
+\begin{equation}
+\Delta\beta_1=0.
+\end{equation}
+For any assigned value $\gamma^+_e$, one may shift the additive constant of one component relative to the other so that
+\begin{equation}
+\gamma^+_e=\phi_v-\phi_u.
+\end{equation}
+Therefore the enlarged state remains integrable.
+
+\begin{proposition}[Bridge-birth rigidity]
+\label{prop:bridge-birth}
+A single bridge birth between two previously disconnected integrable components fixes one previously free relative calibration but cannot create CAL holonomy or non-exact temporal memory.
+\end{proposition}
+
+In rate language, the bridge selects the relative common scale between the two pre-existing rate families. It does not create a redundant comparison loop.
+
+\subsection{Cycle birth and the ancestor-anchored defect}
+
+Now let $G_-$ be connected and integrable, and add one internal relation
+\begin{equation}
+e:u\to v
+\end{equation}
+whose endpoints were already connected in $G_-$. Then
+\begin{equation}
+\Delta\beta_1=1.
+\end{equation}
+Choose any positive rate representative of the parent state,
+\begin{equation}
+\gamma^-_{ij}=\log\frac{r_j}{r_i}.
+\end{equation}
+The old state predicts the exact CAL value
+\begin{equation}
+\gamma^{\rm pred}_e
+=\log\frac{r_v}{r_u}
+\end{equation}
+for the new relation. Define the cycle-birth defect
+\begin{equation}
+\boxed{
+\kappa_e
+:=
+\gamma^+_e-\log\frac{r_v}{r_u}
+}.
+\label{eq:kappa-single}
+\end{equation}
+
+\begin{proposition}[Gauge invariance and integrability criterion]
+\label{prop:kappa-gauge}
+The defect $\kappa_e$ is invariant under local CAL recalibration and under the common rescaling $r_i\mapsto c r_i$. Moreover,
+\begin{equation}
+\kappa_e=0
+\quad\Longleftrightarrow\quad
+\gamma^+\text{ is integrable}.
+\label{eq:kappa-integrability}
+\end{equation}
+\end{proposition}
+
+\paragraph*{Proof.}
+Under a local recalibration by $q$, both $\gamma^+_e$ and $\log(r_v/r_u)$ shift by $q_v-q_u$, so their difference is invariant. A common positive rescaling cancels from the rate ratio. If $\kappa_e=0$, the old parent potential extends to the new edge and represents all of $\gamma^+$. Conversely, if the enlarged state is integrable, its restriction to the connected old parent has the same exact CAL values and therefore differs from the parent potential only by a constant; the new edge must then equal the predicted difference, giving $\kappa_e=0$. \hfill$\square$
+
+For the unique new fundamental cycle formed by the new edge and any old $u$--$v$ path, $\kappa_e$ equals the corresponding oriented CAL period up to the chosen cycle-orientation sign. Thus $\kappa_e$ is not an additional state variable: it is a convenient ancestor-anchored coordinate for the newly available cycle obstruction.
+
+\section{Restricted support-change defect algebra}
+\label{sec:defect}
+
+The single-edge defect extends to a batch of relation births provided all defects are anchored to the same original connected integrable ancestor.
+
+Let
+\begin{equation}
+F=\{e_1,\ldots,e_k\}
+\end{equation}
+be $k$ new internal relations added to the connected integrable parent $G_-$. Let
+\begin{equation}
+\kappa=(\kappa_1,\ldots,\kappa_k)^{\mathsf T}\in\mathbb R^k
+\end{equation}
+collect their defects relative to one fixed parent rate representative. Let
+\begin{equation}
+\iota_F:\mathbb R^k\longrightarrow C^1(G_+;\mathbb R)
+\label{eq:defect-insertion-map}
+\end{equation}
+be the coordinate insertion map that places $\kappa_a$ on the new edge $e_a$ and zero on all persistent old edges.
+
+Since the old parent is exact, the post-birth CAL state can be written
+\begin{equation}
+\gamma^+=D_0^+\phi+\iota_F\kappa,
+\label{eq:birth-decomposition}
+\end{equation}
+where $\phi$ is any parent potential representative. Projecting orthogonally onto the non-exact subspace of the enlarged carrier gives
+\begin{equation}
+\boxed{
+\eta^+=P_{\perp,+}\,\iota_F\kappa
+}.
+\label{eq:eta-after-birth}
+\end{equation}
+Therefore
+\begin{equation}
+\boxed{
+\Rcal^+
+=\kappa^{\mathsf T}K_F\kappa,
+\qquad
+K_F:=\iota_F^{\mathsf T}P_{\perp,+}\iota_F
+}.
+\label{eq:quadratic-kappa}
+\end{equation}
+
+\begin{theorem}[Positive defect quadratic form]
+\label{thm:K-positive}
+For internal relation births from a connected integrable parent, under the frozen positive-definite edge inner product, $K_F$ is symmetric positive definite. Hence
+\begin{equation}
+\Rcal^+>0
+\qquad\text{for every }\kappa\neq0.
+\end{equation}
+\end{theorem}
+
+\paragraph*{Proof.}
+Symmetry follows from orthogonality of $P_{\perp,+}$. For any $\kappa$,
+\begin{equation}
+\kappa^{\mathsf T}K_F\kappa
+=\|P_{\perp,+}\iota_F\kappa\|^2\ge0.
+\end{equation}
+Suppose equality holds. Then $P_{\perp,+}\iota_F\kappa=0$, so $\iota_F\kappa\in\operatorname{im}D_0^+$. Hence there exists a vertex potential $q$ with
+\begin{equation}
+D_0^+q=\iota_F\kappa.
+\end{equation}
+The right-hand side vanishes on every old edge, so $D_0^-q=0$. Because the old parent is connected, $q$ is constant on $V$, which implies $D_0^+q=0$. Thus $\iota_F\kappa=0$ and, since $\iota_F$ is injective, $\kappa=0$. \hfill$\square$
+
+This theorem gives a restricted but exact source statement. Because the ancestor is integrable,
+\begin{equation}
+\Rcal^-=0,
+\end{equation}
+and therefore
+\begin{equation}
+S_{\rm birth}^{\rm rel}
+:=\Rcal^+
+=\kappa^{\mathsf T}K_F\kappa
+\ge0.
+\label{eq:restricted-birth-source}
+\end{equation}
+The adjective ``relative'' is essential: this source is defined with respect to one specified integrable ancestor and one specified batch of births.
+
+\subsection{Single-edge law and graph-theoretic effective resistance}
+
+For one new unit-weight relation $e:u\to v$, let
+\begin{equation}
+b_e:=\mathbf e_v-\mathbf e_u
+\end{equation}
+be its vertex incidence vector and let
+\begin{equation}
+L_-=(D_0^-)^{\mathsf T}D_0^-
+\end{equation}
+be the old graph Laplacian. Define the old graph-theoretic effective resistance between the endpoints by
+\begin{equation}
+R_{\rm eff}^-(u,v)
+:=b_e^{\mathsf T}L_-^+b_e,
+\label{eq:Reff-definition}
+\end{equation}
+where $L_-^+$ is the Moore--Penrose pseudoinverse.
+
+For the new-edge coordinate vector $s_e=\iota_F(1)$,
+\begin{equation}
+\Rcal^+
+=\kappa_e^2\,s_e^{\mathsf T}P_{\perp,+}s_e.
+\end{equation}
+The exact-space leverage of the new unit edge is
+\begin{equation}
+s_e^{\mathsf T}P_{{\rm ex},+}s_e
+=\frac{R_{\rm eff}^-(u,v)}{1+R_{\rm eff}^-(u,v)},
+\label{eq:new-edge-leverage}
+\end{equation}
+by the standard rank-one Laplacian update on the connected old carrier. Since $P_{\perp,+}=I-P_{{\rm ex},+}$,
+\begin{equation}
+s_e^{\mathsf T}P_{\perp,+}s_e
+=\frac{1}{1+R_{\rm eff}^-(u,v)}.
+\end{equation}
+Thus
+\begin{equation}
+\boxed{
+\Rcal_{\rm birth}
+=
+\frac{\kappa_e^2}
+{1+R_{\rm eff}^-(u,v)}
+}.
+\label{eq:single-edge-law}
+\end{equation}
+
+The effective resistance in Eq.~\eqref{eq:single-edge-law} is used only as a graph-theoretic coefficient determined by the old relational carrier and the frozen unit edge inner product. No electrical medium, dissipation law, energy, or physical resistance is postulated.
+
+The minimal path-to-triangle example of Section~\ref{subsec:minimal-example} is recovered immediately: for the old two-edge unit path between vertices $3$ and $1$,
+\begin{equation}
+R_{\rm eff}^-(3,1)=2,
+\end{equation}
+so a cycle defect $\kappa=\delta$ gives
+\begin{equation}
+\Rcal_{\rm birth}=\frac{\delta^2}{3}.
+\end{equation}
+
+\subsection{Composition rule}
+
+For a batch birth, all coordinates $\kappa_a$ in Eq.~\eqref{eq:quadratic-kappa} must be evaluated relative to the same original integrable ancestor. Sequentially recomputing a new ``parent'' after each edge is added changes the reference problem and, in general, changes the coordinates. The invariant batch statement is therefore ancestor-anchored:
+\begin{equation}
+\boxed{
+(G_-,\gamma^-\text{ integrable})
+\;\longrightarrow\;
+\kappa_F
+\;\longrightarrow\;
+\eta^+=P_{\perp,+}\iota_F\kappa_F.
+}
+\label{eq:ancestor-anchor}
+\end{equation}
+
+\subsection{Why the source law does not extend to a general nonintegrable parent}
+
+The previous positivity statement depends critically on $\eta^-=0$. For a nonintegrable parent, adding relations changes not only the available cycle coordinates but also the orthogonal projector that defines the non-exact representative. Consequently, even a newly born fundamental cycle with zero period can reorganize the Hodge representative of pre-existing obstruction.
+
+A minimal explicit witness makes this point concrete. Let $G_-$ be the oriented unit square
+\begin{equation}
+1\to2\to3\to4\to1
+\end{equation}
+with
+\begin{equation}
+\gamma^-=(1,0,0,0)
+\end{equation}
+listed in that edge order. The unique old cycle has period $1$, and its unit-weight non-exact projection is
+\begin{equation}
+\eta^-=\frac14(1,1,1,1),
+\qquad
+\Rcal^-=\frac14.
+\label{eq:square-old-R}
+\end{equation}
+
+Now add the diagonal $e_5:1\to3$ with value
+\begin{equation}
+\gamma^+_{13}=1.
+\end{equation}
+The new triangle $1\to2\to3\to1$ has zero period because
+\begin{equation}
+\gamma_{12}+\gamma_{23}-\gamma_{13}
+=1+0-1=0.
+\label{eq:zero-new-period}
+\end{equation}
+Nevertheless, in the enlarged five-edge carrier the cycle space is two-dimensional. Using the cycle basis
+\begin{align}
+c_1&=(1,1,0,0,-1)^{\mathsf T},\\
+c_2&=(0,0,1,1,1)^{\mathsf T},
+\end{align}
+with Gram matrix
+\begin{equation}
+G_C=
+\begin{pmatrix}
+3&-1\\
+-1&3
+\end{pmatrix},
+\end{equation}
+the enlarged CAL vector
+\begin{equation}
+\gamma^+=(1,0,0,0,1)^{\mathsf T}
+\end{equation}
+has cycle-coordinate right-hand side
+\begin{equation}
+\begin{pmatrix}
+c_1^{\mathsf T}\gamma^+\\
+c_2^{\mathsf T}\gamma^+
+\end{pmatrix}
+=
+\begin{pmatrix}
+0\\1
+\end{pmatrix}.
+\end{equation}
+Hence
+\begin{equation}
+\eta^+
+=\frac18c_1+\frac38c_2
+=
+\left(
+\frac18,\frac18,\frac38,\frac38,\frac14
+\right)^{\mathsf T},
+\end{equation}
+and
+\begin{equation}
+\Rcal^+=\frac38
+\neq
+\frac14=\Rcal^-.
+\label{eq:zero-defect-R-change}
+\end{equation}
+
+Thus a zero period on the newly introduced fundamental cycle does not imply zero change of the total Hodge norm when the parent is already nonintegrable. The new carrier changes the projector and redistributes the representation of the old obstruction.
+
+The arithmetic difference $\Rcal^+-\Rcal^-$ can of course be formed after choosing an inner product on each carrier. What fails is its promotion to a canonical defect-local physical source determined by the newly born cycle. In the general nonintegrable case, the norm itself is evaluated in a changed relational support and responds to the reorganization of pre-existing cycle content.
+
+Accordingly,
+\begin{equation}
+\boxed{
+\text{integrable ancestor}
+\Rightarrow
+\text{canonical restricted birth source};
+}
+\end{equation}
+whereas
+\begin{equation}
+\boxed{
+\text{general nonintegrable parent}
+\not\Rightarrow
+\text{canonical cross-carrier source law from new defects alone}.
+}
+\label{eq:cross-carrier-no-go}
+\end{equation}
+
+This is the support-change boundary used throughout the remainder of the article.
