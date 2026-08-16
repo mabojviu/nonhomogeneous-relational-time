@@ -10,7 +10,7 @@ Terminal endogenous-dynamics audit:
 
 `STOP_LQTA_PHYS_0K_NO_NATIVE_UNIQUE_CAL_GENERATOR__STRUCTURAL_NONHOMOGENEOUS_TIME_THEORY_READY_FOR_ARTICLE_3_SYNTHESIS`
 
-Zenodo DOI reserved for this release:
+Zenodo DOI published for this release:
 
 `10.5281/zenodo.21959348`
 
@@ -18,6 +18,14 @@ DOI-bound archive SHA-256:
 
 `238407016e89ef985c7bd0cb7586cc69d6757d2eeba27b3fa05c3337f41e7ac3`
 
-This DOI is bound to the pre-synthesis scientific freeze. The scientific content is unchanged by DOI binding; only publication metadata are updated.
+Publication status:
 
-The exact DOI-bound archive has been uploaded to the existing Zenodo draft. The pre-synthesis freeze and tag `v0.1.0` must remain historically recoverable after later Article 3 manuscript releases.
+`PUBLISHED_2026-08-16`
+
+GitHub release/tag:
+
+`v0.1.0`
+
+The DOI is bound to the pre-synthesis scientific freeze. No scientific result, theorem, audit outcome, no-go result, or numerical check was changed by DOI binding or publication.
+
+The published Zenodo record and the GitHub release preserve the same DOI-bound archive. The historical tag `v0.1.0` remains fixed at the pre-synthesis release commit and must not be rewritten by later Article 3 manuscript development.
