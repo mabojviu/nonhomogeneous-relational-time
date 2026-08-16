@@ -1,0 +1,77 @@
+--- manuscript/main.tex
++++ manuscript/main.tex
+@@ -79,7 +79,9 @@
+ 
+ A final no-go result establishes the boundary of the construction. Gauge covariance, preservation of the integrable sector, the balance identities, and the support-change defect algebra do not select a unique autonomous evolution for the CAL state. Inequivalent updates remain compatible with the present structural constraints even when the exact component is held fixed; for cycle rank at least two, conservation of $\Rcal$ still leaves a continuous family of memory configurations. A unique CAL generator would therefore require an additional physical selection principle. The theory developed here is consequently structural and kinematic, not an autonomous dynamics.
+ 
+-The mathematical ingredients used in this analysis---finite cochains, exact/cycle orthogonal decompositions, Hodge projections, cycle consistency, and graph-theoretic resistance identities---have well-established antecedents \cite{Whitney1957,Desbrun2005DEC,Jiang2011HodgeRank,Lim2020HodgeLaplacians}. Synchronization and connection-Laplacian problems provide particularly close formal neighbors because global consistency is controlled by cycle data \cite{Singer2011Synchronization,Bandeira2013ConnectionLaplacian}. We do not claim those ingredients as new. The object of the present work is their constrained assembly and temporal interpretation inside a discrete relational model with explicit provenance, support change, and endogeneity firewalls.
++The mathematical ingredients used in this analysis---finite cochains, exact/cycle orthogonal decompositions, Hodge projections, cycle consistency, and graph-theoretic resistance identities---have well-established antecedents \cite{Whitney1957,Desbrun2005DEC,Jiang2011HodgeRank,Lim2020HodgeLaplacians}. Modern edge-flow formulations continue to develop graph-Hodge decompositions and their higher-cell extensions \cite{HoppeSchaub2024}, while synchronization theory uses closed-cycle consistency as a local-to-global compatibility test \cite{Singer2011Synchronization,Bandeira2013ConnectionLaplacian,LiShiLerman2024}. Particularly close to the present obstruction language, recent work on twisted Laplacians shows explicitly how gauge-invariant cycle holonomy controls global compatibility and synchronization frustration \cite{TorresHugas2026}.
++
++There is an equally important neighboring literature on relational clocks. The Page--Wootters construction recovers dynamics through correlations with an internal clock \cite{PageWootters1983}; later clock-neutral and quantum-reference-frame approaches develop gauge-invariant relational observables, transformations between temporal reference frames, and physical-clock descriptions \cite{HoehnSmithLock2021,Giacomini2021}. Recent work treats finite-resource temporal reference frames and periodic clocks \cite{Hausmann2025,Chataignier2026}, while finite quantum-history models have connected exact relational histories to holonomy/monodromy data on cyclic clock architectures \cite{Churilov2026}. These works provide important conceptual and mathematical reference points. The present construction does not replace them: it asks a narrower prior question for a real additive CAL cochain on an arbitrary finite relational carrier---whether the comparison data admit any complete positive local-rate representation at all---and then follows the consequences of failure of that representation through provenance, support change, and the endogenous-dynamics boundary.
+ 
+ Several identifications are excluded throughout. The CAL carrier is not physical space; $\eta$ is not spacetime curvature; $\rho$ is not matter density; $\Rcal$ is not energy or entropy; $J_T$ is not a spatial current; the sign of a structural source is not a thermodynamic arrow; and graph-theoretic effective resistance is not assigned an electrical interpretation. Most importantly, the finite theory is not treated as an approximation to continuous time. Any future relation to space, metric structure, Lorentzian geometry, or a continuum description would have to be derived in a separate construction rather than read back into the present objects.
+ 
+@@ -592,7 +594,7 @@
+ 
+ \section{Changing relational support}\label{sec:support}
+ 
+-The fixed-carrier formulas cannot be transferred unchanged to a transition in which the active CAL support itself changes. Let
++The fixed-carrier formulas cannot be transferred unchanged to a transition in which the active CAL support itself changes. Persistent-Laplacian constructions provide a nearby mathematical treatment of Laplacians across inclusions of complexes and, in the graph case, connect such constructions with effective resistance \cite{MemoliWanWang2022}. We use that literature only as mathematical context: the present model does not infer from it a physical identification between pre- and post-change CAL cochains. Let
+ \begin{equation}
+ G_-=(V_-,E_-)
+ \qquad\longrightarrow\qquad
+@@ -925,7 +927,11 @@
+ 
+ Changing support requires an additional boundary. The fixed-carrier quantity $\Delta\Rcal$ is unambiguous because before and after states share one cochain space and one inner product. Across different carriers there is no general canonical vector difference $\eta_+-\eta_-$. Starting from a connected integrable ancestor, however, ancestor-anchored birth defects produce the restricted positive quadratic law $\Rcal_+=\kappa^{\mathsf T}K_F\kappa$. The explicit zero-new-period witness shows why this attribution cannot be extended unchanged to a general nonintegrable parent.
+ 
+-The mathematical ingredients of the construction have established antecedents. Orthogonal decomposition into exact and cycle components is standard finite graph-Hodge theory; cycle consistency is central to synchronization and ranking problems; graph effective resistance is a standard Laplacian quantity. These mathematical facts are used here rather than claimed as new. The model-specific content lies in their constrained assembly and temporal interpretation inside the frozen relational ontology.
++The mathematical ingredients of the construction have established antecedents. Orthogonal decomposition into exact and cycle components is standard finite graph-Hodge theory, with modern edge-flow work extending Hodge representations to richer cell-complex settings \cite{Whitney1957,Desbrun2005DEC,Jiang2011HodgeRank,Lim2020HodgeLaplacians,HoppeSchaub2024}. Cycle consistency, synchronization, and connection-Laplacian methods likewise make closed-loop compatibility a central local-to-global diagnostic \cite{Singer2011Synchronization,Bandeira2013ConnectionLaplacian,LiShiLerman2024}; the recent twisted-Laplacian analysis of Torres-Hugas \emph{et al.} makes the gauge-invariant cycle-holonomy obstruction especially explicit \cite{TorresHugas2026}. For changing support, persistent Laplacians supply a mathematically adjacent framework for nested complexes and connect graph Laplacians with effective resistance \cite{MemoliWanWang2022}.
++
++The temporal interpretation also has substantial antecedents. Internal-clock and relational-observable programs describe dynamics without treating an external scalar time as the only possible clock description \cite{PageWootters1983,HoehnSmithLock2021,Giacomini2021}; finite-resource and periodic-clock studies sharpen the operational limits and covariance of such descriptions \cite{Hausmann2025,Chataignier2026}. Churilov's finite quantum-history construction is a particularly close recent conceptual neighbor because exact history sectors and clock-change structure are organized by cycle monodromy/holonomy \cite{Churilov2026}. These works overlap with different pieces of the present construction and deserve to be read as genuine reference points rather than foils.
++
++What is model-specific here is therefore not any one of those mathematical tools or relational-clock ideas in isolation, but the consequences obtained when a real additive CAL scale-comparison cochain is taken as the primitive temporal datum of the frozen finite-event ontology: exactness becomes the criterion for completeness of positive local rates, the non-exact remainder receives the restricted interpretation of collective temporal memory, realized change is decomposed by event provenance, support change is treated without silently identifying distinct cochain spaces, and the resulting structure is tested explicitly for whether it selects its own autonomous dynamics.
+ 
+ \subsection{Firewall against premature physical identifications}
+ 
+@@ -1015,11 +1021,41 @@
+ \section{Frozen result lineage}\label{app:lineage}
+ A final claim-lineage table will map the principal statements in this manuscript to the frozen LQTA-PHYS audit blocks and the DOI-bound pre-synthesis archive. This appendix is editorial traceability only and does not modify any scientific statement.
+ 
+-\begin{thebibliography}{20}
++\begin{thebibliography}{30}
+ 
+ \bibitem{BojViudes2026TemporalDomains}
+ M. Boj Viudes, ``Collaborative relational time without a global clock: Reproducibility materials for finite event networks,'' Zenodo, Version 2.0.0, Software (2026), doi:10.5281/zenodo.21938420.
+ 
++\bibitem{PageWootters1983}
++D. N. Page and W. K. Wootters, ``Evolution without evolution: Dynamics described by stationary observables,'' Phys. Rev. D \textbf{27}, 2885--2892 (1983), doi:10.1103/PhysRevD.27.2885.
++
++\bibitem{HoehnSmithLock2021}
++P. A. H\"ohn, A. R. H. Smith, and M. P. E. Lock, ``Trinity of relational quantum dynamics,'' Phys. Rev. D \textbf{104}, 066001 (2021), doi:10.1103/PhysRevD.104.066001.
++
++\bibitem{Giacomini2021}
++F. Giacomini, ``Spacetime Quantum Reference Frames and superpositions of proper times,'' Quantum \textbf{5}, 508 (2021), doi:10.22331/q-2021-07-22-508.
++
++\bibitem{MemoliWanWang2022}
++F. M\'emoli, Z. Wan, and Y. Wang, ``Persistent Laplacians: Properties, Algorithms and Implications,'' SIAM J. Math. Data Sci. \textbf{4}, 858--884 (2022), doi:10.1137/21M1435471.
++
++\bibitem{LiShiLerman2024}
++S. Li, Y. Shi, and G. Lerman, ``Efficient Detection of Long Consistent Cycles and its Application to Distributed Synchronization,'' in \textit{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)} (2024), pp. 5260--5269.
++
++\bibitem{HoppeSchaub2024}
++J. Hoppe and M. T. Schaub, ``Representing Edge Flows on Graphs via Sparse Cell Complexes,'' Proc. Mach. Learn. Res. \textbf{231}, 1:1--1:22 (2024).
++
++\bibitem{Hausmann2025}
++L. Hausmann, A. Schmidhuber, and E. Castro-Ruiz, ``Measurement events relative to temporal quantum reference frames,'' Quantum \textbf{9}, 1616 (2025), doi:10.22331/q-2025-01-30-1616.
++
++\bibitem{Chataignier2026}
++L. Chataignier, P. A. H\"ohn, M. P. E. Lock, and F. M. Mele, ``Relational dynamics with periodic clocks,'' New J. Phys. \textbf{28}, 034504 (2026), doi:10.1088/1367-2630/ae46d0.
++
++\bibitem{TorresHugas2026}
++L. Torres-Hugas, J. Duch, S. G\'omez, and A. Arenas, ``Cycle holonomy induces higher-order constraints and controls remote synchronization transitions via twisted Laplacian spectra,'' arXiv:2604.19682 (2026).
++
++\bibitem{Churilov2026}
++M. V. Churilov, ``Finite Quantum Histories: Holonomy Spectra, Minimal Clocks, and Exact Clock-Change Covariance,'' arXiv:2608.05748 (2026).
++
+ \bibitem{Whitney1957}
+ H. Whitney, \textit{Geometric Integration Theory} (Princeton University Press, Princeton, NJ, 1957).
