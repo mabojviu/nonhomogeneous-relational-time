@@ -1,0 +1,248 @@
+% LQTA-D Article 3 -- Editorial Pass 03
+% Provenance + continuity candidate v0.4
+% Scope: realized fixed-support changes only.
+% No autonomous dynamics is introduced here.
+
+\section{Realized changes, provenance, and structural continuity}
+\label{sec:balance}
+
+The previous sections characterize the CAL state and its non-exact content. We now turn to a different question: once a CAL change has actually occurred, can its change in structural memory be decomposed into redistribution and net production/removal in a way selected by the relational history itself?
+
+This question is logically downstream of the state update. The construction below therefore takes the realized before/after CAL states as input. It does not assign transition probabilities, choose an update, minimize a functional, or define an equation of motion.
+
+\subsection{Realized structural change}
+
+Fix one CAL carrier $G=(V,E)$ and consider a realized transition
+\begin{equation}
+\gamma^-\longrightarrow\gamma^+.
+\end{equation}
+Let
+\begin{equation}
+\eta^- = P_\perp\gamma^- ,
+\qquad
+\eta^+ = P_\perp\gamma^+ ,
+\end{equation}
+and define the local structural allocations
+\begin{equation}
+\rho_i^- = \frac12\sum_{e\ni i}(\eta_e^-)^2,
+\qquad
+\rho_i^+ = \frac12\sum_{e\ni i}(\eta_e^+)^2.
+\end{equation}
+The realized local change is
+\begin{equation}
+\Delta\rho_i:=\rho_i^+-\rho_i^-.
+\label{eq:delta-rho-def}
+\end{equation}
+Since
+\begin{equation}
+\Rcal^{\pm}=\sum_i\rho_i^{\pm},
+\end{equation}
+we have
+\begin{equation}
+\Delta\Rcal
+=\Rcal^+-\Rcal^-
+=\sum_{i\in V}\Delta\rho_i.
+\label{eq:delta-R-sum}
+\end{equation}
+
+Because $\eta=P_\perp\gamma$ is invariant under local recalibration, $\rho$, $\Delta\rho$, and $\Delta\Rcal$ are gauge invariant on fixed support.
+
+\subsection{Event provenance as a routing selector}
+
+Suppose the realized event also carries a finite rooted provenance tree
+\begin{equation}
+T=(V_T,E_T),
+\qquad V_T\subseteq V,
+\end{equation}
+with root $a\in V_T$, the event's write anchor. Vertices outside $V_T$ are spectators for this event and have $\Delta\rho_i=0$ in the present construction.
+
+Orient every provenance edge away from the root. For each non-root vertex $v$, let $p(v)$ denote its unique parent; let $\operatorname{Ch}(v)$ be its children; and let $\operatorname{Sub}_T(v)$ denote the rooted subtree containing $v$ and all of its descendants.
+
+The tree is not a spatial transport network. It is a finite record of event provenance: it specifies which local historical branch is used to attribute the realized structural change.
+
+\begin{definition}[Provenance-conditioned structural current]
+For every oriented provenance edge $v\to c$ with $c\in\operatorname{Ch}(v)$, define
+\begin{equation}
+J_T(v\to c)
+:=
+\sum_{u\in\operatorname{Sub}_T(c)}\Delta\rho_u.
+\label{eq:provenance-current}
+\end{equation}
+\end{definition}
+
+Thus the current assigned to an edge is the total realized structural change carried by the descendant branch below that edge. This definition contains no free fitting parameter.
+
+Define the rooted-tree divergence by outgoing minus incoming current,
+\begin{equation}
+(\divT J_T)_v
+:=
+\sum_{c\in\operatorname{Ch}(v)}J_T(v\to c)
+-
+\begin{cases}
+J_T(p(v)\to v), & v\neq a,\\
+0, & v=a.
+\end{cases}
+\label{eq:tree-divergence}
+\end{equation}
+
+\subsection{Exact continuity closure}
+
+\begin{theorem}[Provenance-conditioned continuity closure]
+\label{thm:provenance-closure}
+For any realized fixed-carrier change $\Delta\rho$ and any rooted provenance tree $T$ containing its active support, the current in Eq.~\eqref{eq:provenance-current} satisfies
+\begin{equation}
+\boxed{
+\Delta\rho+\divT J_T=S_T
+}
+\label{eq:continuity}
+\end{equation}
+with
+\begin{equation}
+(S_T)_v=0
+\qquad
+(v\neq a)
+\label{eq:source-nonroot}
+\end{equation}
+and
+\begin{equation}
+(S_T)_a
+=\sum_{u\in V_T}\Delta\rho_u
+=\Delta\Rcal.
+\label{eq:source-root}
+\end{equation}
+Moreover, $J_T$ is the unique current on the fixed rooted tree satisfying Eq.~\eqref{eq:continuity} together with the source convention in Eqs.~\eqref{eq:source-nonroot}--\eqref{eq:source-root}.
+\end{theorem}
+
+\paragraph*{Proof.}
+For a non-root vertex $v$, the rooted-subtree identity
+\begin{equation}
+\operatorname{Sub}_T(v)
+=
+\{v\}\,\dot\cup\!
+\bigcup_{c\in\operatorname{Ch}(v)}
+\operatorname{Sub}_T(c)
+\end{equation}
+implies
+\begin{align}
+(\divT J_T)_v
+&=
+\sum_{c\in\operatorname{Ch}(v)}
+\sum_{u\in\operatorname{Sub}_T(c)}\Delta\rho_u
+-
+\sum_{u\in\operatorname{Sub}_T(v)}\Delta\rho_u\\
+&=-\Delta\rho_v.
+\end{align}
+Hence $(S_T)_v=0$ for every $v\neq a$. At the root,
+\begin{align}
+(\divT J_T)_a
+&=
+\sum_{c\in\operatorname{Ch}(a)}
+\sum_{u\in\operatorname{Sub}_T(c)}\Delta\rho_u\\
+&=
+\sum_{u\in V_T}\Delta\rho_u-\Delta\rho_a,
+\end{align}
+so Eq.~\eqref{eq:continuity} gives $(S_T)_a=\sum_u\Delta\rho_u=\Delta\Rcal$.
+
+For uniqueness, begin at a leaf $\ell$. Equation~\eqref{eq:continuity} with zero non-root source fixes its incoming edge current to $J_T(p(\ell)\to\ell)=\Delta\rho_\ell$. Removing leaves recursively fixes every parent edge to the sum of $\Delta\rho$ over its descendant subtree, which is exactly Eq.~\eqref{eq:provenance-current}. \hfill$\square$
+
+\begin{corollary}[Global balance]
+\label{cor:global-balance}
+Summing Eq.~\eqref{eq:continuity} over the provenance tree yields
+\begin{equation}
+\boxed{
+\Delta\Rcal=\sum_{v\in V_T}(S_T)_v=(S_T)_a
+}.
+\label{eq:global-balance}
+\end{equation}
+\end{corollary}
+
+The divergence term cancels globally because each tree edge appears once as outgoing and once as incoming.
+
+\subsection{Redistribution versus net structural source}
+
+Equation~\eqref{eq:continuity} separates two logically different features of a realized change.
+
+If
+\begin{equation}
+\Delta\Rcal=0,
+\end{equation}
+then
+\begin{equation}
+S_T=0
+\end{equation}
+and the event is a pure provenance-conditioned redistribution of the local structural allocations $\rho_i$. The detailed $\rho_i$ can change even though the total non-exact content is unchanged.
+
+If
+\begin{equation}
+\Delta\Rcal>0,
+\end{equation}
+the root carries a positive net structural source, while if
+\begin{equation}
+\Delta\Rcal<0,
+\end{equation}
+it carries a negative net structural source. These signs refer only to realized change in $\Rcal$. They do not define energy injection/removal, entropy production, creation/destruction of physical time, or a thermodynamic arrow.
+
+\subsection{Why provenance matters}
+
+The scalar balance equation alone does not generally determine a unique current. On a carrier with cycles, if a current $J$ solves a divergence equation then
+\begin{equation}
+J' = J+h,
+\qquad
+\operatorname{div}h=0,
+\label{eq:div-free-ambiguity}
+\end{equation}
+solves the same equation for every divergence-free cycle current $h$. Hence continuity by itself cannot select a unique representative on a cyclic routing carrier.
+
+The provenance tree removes precisely this ambiguity. A tree has no nonzero cycle current, and the rooted historical structure fixes the unique branchwise representative in Theorem~\ref{thm:provenance-closure}. The selection is therefore not produced by the continuity identity; it is supplied by event provenance already present in the relational model.
+
+This distinction is essential:
+\begin{equation}
+\boxed{
+\text{realized CAL update}
+\;\Longrightarrow\;
+\Delta\rho
+\;\xrightarrow{\text{provenance}}\;
+(J_T,S_T),
+}
+\label{eq:provenance-logic}
+\end{equation}
+not
+\begin{equation}
+(J_T,S_T)
+\;\Longrightarrow\;
+\text{unique CAL update}.
+\label{eq:not-generator}
+\end{equation}
+
+\subsection{Gauge invariance and spectator independence}
+
+\begin{proposition}[Inherited gauge invariance]
+\label{prop:continuity-gauge}
+On fixed support, the provenance-conditioned quantities $\Delta\rho$, $J_T$, and $S_T$ are invariant under independent local CAL recalibrations of the before and after states.
+\end{proposition}
+
+\paragraph*{Proof.}
+Local recalibrations modify only the exact component of $\gamma^{\pm}$ and therefore leave $\eta^{\pm}$, $\rho^{\pm}$, and $\Delta\rho$ unchanged. Equations~\eqref{eq:provenance-current} and \eqref{eq:source-root} then make $J_T$ and $S_T$ functions only of the invariant $\Delta\rho$ and the fixed provenance tree. \hfill$\square$
+
+Spectator vertices with $\Delta\rho=0$ do not change the branch sums unless they alter the actual provenance tree of the event. Merely adjoining unrelated inactive vertices therefore does not change the structural current or source associated with the realized event.
+
+\subsection{Physical status of the continuity law}
+
+The exact relation
+\begin{equation}
+\Delta\rho+\divT J_T=S_T
+\end{equation}
+is a native closure law for realized structural change under frozen provenance. Its content is stronger than a freely chosen bookkeeping convention because provenance selects the current representative and all terms are derived from model objects. Its content is weaker than a dynamical conservation law because it does not determine $\Delta\rho$.
+
+Accordingly:
+\begin{equation}
+\boxed{
+\text{continuity closure}
+\neq
+\text{autonomous equation of motion}.
+}
+\end{equation}
+
+Nor is Eq.~\eqref{eq:continuity} a Noether law in the present theory: no action symmetry has been derived whose variational invariance produces this identity. The gauge invariance of its ingredients expresses representational redundancy of CAL calibration, not by itself a Noether symmetry with an associated conserved charge.
+
+The safe interpretation is therefore that provenance supplies a canonical, history-compatible decomposition of a realized change into branchwise redistribution plus the net change of non-exact CAL structural content.
