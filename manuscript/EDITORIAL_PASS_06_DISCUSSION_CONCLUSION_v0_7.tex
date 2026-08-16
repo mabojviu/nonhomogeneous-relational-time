@@ -1,0 +1,190 @@
+% LQTA-D Article 3 -- Editorial Pass 06
+% Discussion + conclusion + scope/reproducibility candidate v0.7
+% Final block of the section-by-section audit.
+
+\section{Synthetic interpretation and scope}
+\label{sec:discussion}
+
+The preceding results can be read as a hierarchy of increasingly relational temporal structure:
+\begin{equation}
+\boxed{
+\text{homogeneous CAL}
+\subset
+\text{integrable nonhomogeneous CAL}
+\subset
+\text{general nonintegrable CAL}.
+}
+\label{eq:temporal-hierarchy}
+\end{equation}
+The distinction is not one of approximation order. Each sector is defined exactly on a finite relational carrier.
+
+In the homogeneous sector,
+\begin{equation}
+\gamma=0,
+\end{equation}
+and the clock readout uses one common metrological calibration $r_0$. In the integrable nonhomogeneous sector,
+\begin{equation}
+\gamma=D_0\phi,
+\end{equation}
+and the complete CAL state can be represented by derived positive local rates
+\begin{equation}
+r_i=r_0e^{\phi_i},
+\end{equation}
+unique up to one common rescaling. In the general sector,
+\begin{equation}
+\gamma=D_0\phi+\eta,
+\qquad
+\eta\neq0,
+\end{equation}
+and no global assignment of local rates reproduces all CAL comparisons.
+
+This hierarchy sharpens the role of local clocks. Local rates are not rejected; rather, their domain of completeness is derived. They are sufficient exactly on the integrable CAL sector. The non-exact remainder is therefore not an additional local clock field but the obstruction to any such complete local-rate representation.
+
+\subsection{Meaning of collective temporal memory}
+
+The term \emph{collective temporal memory} refers specifically to the gauge-invariant non-exact CAL content represented by $\eta$, or equivalently by the set of cycle periods modulo choice of cycle basis. The word ``collective'' indicates that this information is supported by redundant relational comparison: no single vertex variable and no global family of local rates contains it independently.
+
+The term ``memory'' is used in a structural rather than thermodynamic sense. A nonzero cycle period records a relational incompatibility that survives local recalibration. If the same relations persist, that cycle obstruction persists under pure addition of unrelated relations. This historical persistence motivates the terminology, but the present theory does not derive microscopic storage, dissipation, entropy, hysteresis, or an arrow of time from $\eta$ or $\Rcal$.
+
+Trees make the distinction especially transparent. A tree may carry arbitrarily nonhomogeneous CAL values, but all such values are exact. Redundant comparison loops are required before a gauge-invariant obstruction can exist. Thus
+\begin{equation}
+\boxed{
+\text{nonhomogeneity}\neq\text{collective temporal memory},
+}
+\end{equation}
+while
+\begin{equation}
+\boxed{
+\text{nontrivial cycle holonomy}
+\Longrightarrow
+\text{failure of a complete local-rate representation}.
+}
+\end{equation}
+
+\subsection{State, event, provenance, and dynamics}
+
+The full construction separates four levels that should not be conflated:
+\begin{equation}
+\text{CAL state}
+\longrightarrow
+\text{realized change}
+\longrightarrow
+\text{provenance accounting}
+\longrightarrow
+\text{dynamical selection problem}.
+\label{eq:four-levels}
+\end{equation}
+
+The CAL state determines its exact and non-exact components. A realized event determines a before/after change. Event provenance then selects a unique history-compatible current on the rooted provenance tree and closes
+\begin{equation}
+\Delta\rho+\divT J_T=S_T.
+\end{equation}
+What provenance does not do is choose the event itself. The final no-go theorem shows that the structural constraints leave several incompatible autonomous updates admissible.
+
+This separation is central to the scientific status of the framework. The theory is stronger than a collection of definitions because it produces exact representation theorems, obstruction criteria, balance identities, support-change laws, and no-go results. It is weaker than an autonomous dynamical theory because it does not derive a unique generator.
+
+\subsection{Changing support and the restricted meaning of source}
+
+The fixed-carrier source
+\begin{equation}
+\Delta\Rcal
+\end{equation}
+is unambiguous because the before and after states share one cochain space and one frozen inner product. Changing relational support is different: the Hodge projector and cycle space may change, so there is no general canonical vector difference $\eta^+-\eta^-$ across carriers.
+
+For this reason, the strongest cross-support source statement in the theory is deliberately restricted. Starting from a connected integrable ancestor, a batch of internal relation births has ancestor-anchored defects $\kappa$ and produces
+\begin{equation}
+\Rcal^+=\kappa^{\mathsf T}K_F\kappa\ge0.
+\end{equation}
+Here the parent has $\Rcal^-=0$, so the new non-exact content is canonically attributable to the specified birth defects relative to that ancestor.
+
+This attribution cannot be extended unchanged to a general nonintegrable parent. The explicit zero-new-period witness shows that the total Hodge norm can change because the carrier changes the projector acting on already existing obstruction. Accordingly, the article does not promote $\Rcal^+-\Rcal^-$ to a universal defect-local physical source under arbitrary support change.
+
+\subsection{Relation to neighboring mathematics}
+
+The mathematical ingredients of the construction have established antecedents. Exact and coexact decompositions belong to finite cochain and Hodge theory; cycle consistency is central to synchronization and ranking problems; graph effective resistance is a standard Laplacian quantity. These mathematical facts are used here rather than claimed as new.
+
+The model-specific content lies in the constrained assembly: CAL is interpreted as temporal scale comparison rather than as a generic edge signal; positive local rates are reconstructed only in the integrable sector; the non-exact remainder is interpreted as irreducibly relational temporal structure; provenance selects the current representative for a realized change; relation birth/death is treated without an analyst-imposed cross-carrier embedding; and the resulting constraints are explicitly tested for whether they close an endogenous dynamics.
+
+This article therefore makes no universal novelty claim for the underlying mathematical tools. Its scientific contribution is the set of exact consequences and boundaries that follow when those tools are applied within the frozen relational temporal ontology.
+
+\subsection{Firewall against premature physical identifications}
+
+The interpretation developed here is intentionally narrower than several familiar continuum analogies. In particular,
+\begin{align}
+\text{CAL carrier}&\neq\text{physical space},\\
+\eta&\neq\text{spacetime curvature},\\
+\rho&\neq\text{matter density},\\
+\Rcal&\neq\text{energy or entropy},\\
+J_T&\neq\text{spatial current},\\
+\divT&\neq\nabla\!\cdot,\\
+R_{\rm eff}&\neq\text{postulated physical resistance}.
+\end{align}
+Similarly, a positive or negative structural source is not identified with a thermodynamic arrow, and relation birth or death is not identified with spatial topology change.
+
+The temporal ontology is also not a discretization of a hidden continuous time. The theory begins with finite relational temporal structure. Any later continuum description, if one is ever useful, would have to arise as an effective representation and is not the ontology assumed here.
+
+A future composition with an independently developed relational spatial branch may test whether additional jointly derived structures admit a spacetime interpretation. Such a composition must preserve the present firewalls unless a new theorem explicitly bridges them.
+
+\section{Reproducibility and claim provenance}
+\label{sec:workflow}
+
+The scientific results summarized in this article were frozen before manuscript synthesis. The corresponding pre-synthesis archive is publicly preserved at Zenodo DOI
+\begin{equation}
+\texttt{10.5281/zenodo.21959348},
+\end{equation}
+and the associated source repository is
+\begin{equation}
+\texttt{github.com/mabojviu/nonhomogeneous-relational-time}.
+\end{equation}
+The archive preserves the analytic and computational audit blocks from which the manuscript claims are assembled, including negative results and explicit no-go boundaries.
+
+The manuscript should include, in an appendix or supplementary table, a compact claim-provenance map linking each principal theorem or proposition to its frozen audit block. This traceability is intended to distinguish manuscript exposition from post hoc alteration of the underlying scientific state.
+
+OpenAI ChatGPT, using the GPT-5.6 Sol model, was used as a research tool during mathematical formalization, adversarial test design, code and verification work, literature synthesis, reproducibility organization, and manuscript drafting and revision. Scientific claims and interpretations were retained only after explicit checking against the frozen analytic or computational record and, where applicable, the cited literature. The human author is solely responsible for the scientific content, verification decisions, interpretation, and submission.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+This work develops the nonhomogeneous sector of a finite relational theory of fundamentally discrete time without assuming a primitive global temporal parameter or primitive local rate field.
+
+The first result is an exact criterion for the existence of a local-rate description. A connected CAL comparison state admits
+\begin{equation}
+\gamma_{ij}=\log\frac{r_j}{r_i}
+\end{equation}
+for positive local rates if and only if it is integrable. When such rates exist, they are derived from the relational comparison data and are unique up to one common positive calibration.
+
+The general CAL state decomposes as
+\begin{equation}
+\gamma=D_0\phi+\eta.
+\end{equation}
+The exact component is representable by derived local rates, whereas the non-exact component is not. Nonzero cycle holonomy therefore marks the failure of any complete global local-rate representation. This gauge-invariant cycle-supported remainder is the collective temporal memory of the model in the restricted structural sense defined here.
+
+The theory also determines how realized structural changes can be described. On fixed support, $\Rcal=\|\eta\|^2$ provides a gauge-invariant total non-exact content and yields an exact transition classification. Once a realized event and its provenance tree are supplied, the local structural change admits a unique provenance-conditioned current satisfying
+\begin{equation}
+\Delta\rho+\divT J_T=S_T.
+\end{equation}
+This closes the accounting of the event without choosing the event.
+
+Changing relational support introduces a separate boundary. Bridge births change relative calibration without creating cycle memory. Cycle births from an integrable ancestor carry gauge-invariant defects and produce
+\begin{equation}
+\Rcal^+=\kappa^{\mathsf T}K_F\kappa,
+\end{equation}
+with $K_F$ positive definite. For one new unit relation,
+\begin{equation}
+\Rcal_{\rm birth}
+=
+\frac{\kappa_e^2}{1+R_{\rm eff}^-(u,v)}.
+\end{equation}
+For a general nonintegrable parent, however, no analogous defect-local source law follows because changing support can reorganize the Hodge representative of pre-existing obstruction.
+
+Finally, the structural theory does not determine its own autonomous dynamics. Multiple inequivalent maps of the non-exact CAL state preserve all currently derived structural requirements, and for multi-cycle carriers a continuum of distinct memory configurations can share the same $\Rcal$. A unique generator therefore requires an additional selection principle not contained in the frozen ontology.
+
+The resulting scientific status is consequently precise:
+\begin{equation}
+\boxed{
+\text{nonhomogeneous LQTA-D}
+=
+\text{finite structural and kinematic relational-time theory}
+}
+\end{equation}
+with an exact integrability boundary for local clocks, a cycle-supported collective temporal sector, history-selected accounting of realized change, and an explicit no-go against claiming an endogenous autonomous dynamics before further physics is derived.
